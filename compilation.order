@@ -1,0 +1,6 @@
+.\src\bitcell.sv
+.\src\bitcell_tb.sv
+.\src\memory_unit.sv
+.\src\memory_unit_tb.sv
+.\src\word.sv
+.\src\word_tb.sv

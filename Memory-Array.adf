@@ -1,0 +1,37 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=Memory-Array
+[Library]
+Memory-Array=.\Memory-Array\Memory-Array.lib
+[$LibMap$]
+Memory-Array=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=ONLY_IMPL
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+fileopenfolder=C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src
+[IMPLEMENTATION]
+UCF=
+[Files]
+/bitcell.sv=-1
+/bitcell_tb.sv=-1
+/memory_unit.sv=-1
+/memory_unit_tb.sv=-1
+/word.sv=-1
+/word_tb.sv=-1
+[Files.Data]
+.\src\bitcell.sv=SystemVerilog Source Code
+.\src\bitcell_tb.sv=SystemVerilog Source Code
+.\src\memory_unit.sv=SystemVerilog Source Code
+.\src\memory_unit_tb.sv=SystemVerilog Source Code
+.\src\word.sv=SystemVerilog Source Code
+.\src\word_tb.sv=SystemVerilog Source Code

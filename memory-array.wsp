@@ -1,0 +1,27 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=0
+Memory-Array=0
+[COMPILESTATUS|.\src\bitcell.sv]
+FileTimeLow=3056646031
+FileTimeHigh=30991287
+Status=Modified
+[COMPILESTATUS|.\src\bitcell_tb.sv]
+FileTimeLow=3059458582
+FileTimeHigh=30991287
+Status=Modified
+[COMPILESTATUS|.\src\memory_unit.sv]
+FileTimeLow=3058566131
+FileTimeHigh=30991287
+Status=Modified
+[COMPILESTATUS|.\src\memory_unit_tb.sv]
+FileTimeLow=3061137858
+FileTimeHigh=30991287
+Status=Modified
+[COMPILESTATUS|.\src\word.sv]
+FileTimeLow=3057654544
+FileTimeHigh=30991287
+Status=Modified
+[COMPILESTATUS|.\src\word_tb.sv]
+FileTimeLow=3060251390
+FileTimeHigh=30991287
+Status=Modified

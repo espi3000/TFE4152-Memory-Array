@@ -1,0 +1,8 @@
+[Version]
+Version=13.0
+[Designs]
+Memory-Array=Memory-Array.adf
+[Settings]
+Active=Memory-Array
+[Expand]
+memory-array=1
