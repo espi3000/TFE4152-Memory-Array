@@ -1,1 +1,7 @@
-0
+2
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 3 "../src/bitcell.sv" 8 bitcell
+~A 1 "../src/bitcell.sv" 8 bitcell
+~M 1 "../src/bitcell.sv" 1 sr_latch
+~A 1 "../src/bitcell.sv" 1 sr_latch
