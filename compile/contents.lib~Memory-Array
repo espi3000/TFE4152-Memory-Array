@@ -1,7 +1,9 @@
-2
+5
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
-~M 3 "../src/bitcell.sv" 8 bitcell
-~A 1 "../src/bitcell.sv" 8 bitcell
-~M 1 "../src/bitcell.sv" 1 sr_latch
-~A 1 "../src/bitcell.sv" 1 sr_latch
+~M 1 "../src/bitcell.sv" 14 bitcell
+~A 1 "../src/bitcell.sv" 14 bitcell
+~M 3 "../src/bitcell_tb.sv" 3 bitcell_tb
+~A 1 "../src/bitcell_tb.sv" 3 bitcell_tb
+~M 1 "../src/bitcell.sv" 4 sr_latch
+~A 1 "../src/bitcell.sv" 4 sr_latch

@@ -1,1 +1,6 @@
+"../src/word_tb.sv"	1
+"../src/word.sv"	1
 "../src/bitcell.sv"	1
+"../src/bitcell_tb.sv"	1
+"../src/memory_unit.sv"	1
+"../src/memory_unit_tb.sv"	1
