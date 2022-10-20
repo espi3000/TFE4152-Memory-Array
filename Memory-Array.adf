@@ -35,3 +35,7 @@ UCF=
 .\src\memory_unit_tb.sv=SystemVerilog Source Code
 .\src\word.sv=SystemVerilog Source Code
 .\src\word_tb.sv=SystemVerilog Source Code
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

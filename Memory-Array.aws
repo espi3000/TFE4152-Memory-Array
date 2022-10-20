@@ -6,3 +6,9 @@ Memory-Array=Memory-Array.adf
 Active=Memory-Array
 [Expand]
 memory-array=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

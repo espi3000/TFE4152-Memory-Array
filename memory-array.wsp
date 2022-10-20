@@ -2,12 +2,12 @@
 Built-in symbols=0
 Memory-Array=0
 [COMPILESTATUS|.\src\bitcell.sv]
-FileTimeLow=2192270860
-FileTimeHigh=30991294
-Status=Compiled
+FileTimeLow=1550279252
+FileTimeHigh=30991295
+Status=Modified
 [COMPILESTATUS|.\src\bitcell_tb.sv]
-FileTimeLow=3059458582
-FileTimeHigh=30991287
+FileTimeLow=2812939443
+FileTimeHigh=30991299
 Status=Modified
 [COMPILESTATUS|.\src\memory_unit.sv]
 FileTimeLow=3058566131
@@ -25,3 +25,15 @@ Status=Modified
 FileTimeLow=3060251390
 FileTimeHigh=30991287
 Status=Modified
+[General]
+CurrentVersion=103
+[CACHEDOC|Aldec.Project.Generic.7|.\Memory-Array.adf|]
+Path=
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\bitcell.sv|]
+CurrentLine=12
+CurrentColumn=50
+Bookmarks=-1
+BookmarksLength=3
+ZoomFactor=0
+Frame=0
+WindowWorkspaceInfo="LAAAAAAAAAABAAAA/////////////////////80AAACZAAAA/wQAACICAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAAAAAAAAQAAAA=="

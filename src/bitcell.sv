@@ -15,9 +15,9 @@ module bitcell(out, in, sel, rw);
     input in, sel, rw; 
     output out;
     wire q, not_q, s, r, not_rw;
-    nand(s, in, sel, rw);
-    nand(r, s, sel, rw);
-    sr_latch latch(q, not_q, s, r);
     not(not_rw, rw);
-    nand(out, q, sel, not_rw);
+    nand(s, in, sel, not_rw); // In to S select gate
+    nand(r, s, sel, not_rw);  // S to R select gate
+    and(out, q, sel, rw);    // Q to Out select gate
+    sr_latch latch(q, not_q, s, r);
 endmodule
