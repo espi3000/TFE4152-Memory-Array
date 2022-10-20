@@ -1,0 +1,23 @@
+*3 INPUT AND GATE
+.subckt 3_in_and y a b c vdd vss
+.include param.cir
+xmp1 noty a vdd vdd pmos1v l=lp w=wp
+xmp2 noty b vdd vdd pmos1v l=lp w=wp
+xmp3 noty c vdd vdd pmos1v l=lp w=wp
+xmn1 noty a 1 1 pmos1v l=lp w=wp
+xmn2 1 b 2 2 pmos1v l=lp w=wp
+xmn3 2 c vss vss pmos1v l=lp w=wp
+xmp4 y noty vdd vdd pmos1v l=lp w=wp 
+xmn4 y noty vss vss nmos1v l=ln w=wn 
+.ends
+
+*2 INPUT AND GATE
+.subckt 2_in_and y a b vdd vss
+.include param.cir
+xmp1 noty a vdd vdd pmos1v l=lp w=wp
+xmp2 noty b vdd vdd pmos1v l=lp w=wp
+xmn1 noty a 1 1 pmos1v l=lp w=wp
+xmn2 1 b vss vss pmos1v l=lp w=wp
+xmp3 y noty vdd vdd pmos1v l=lp w=wp 
+xmn3 y noty vss vss nmos1v l=ln w=wn 
+.ends
