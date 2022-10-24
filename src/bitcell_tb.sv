@@ -5,25 +5,12 @@ module bitcell_tb;
     wire out;
     // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
     localparam period = 20;  
-    bitcell DUT(.out(out), .in(in), .sel(sel), .rw(rw));
+    bitcell_nor DUT(.out(out), .in(in), .sel(sel), .rw(rw));
     initial // initial block executes only once
         begin  
-			//Select bitcell
-            in = 1;
-            sel = 1;
-            rw = 0;
-            #period; // wait for period 
-
-			//Store value in bitcell
-            in = 1;
-            sel = 1;
-            rw = 0;
-            #period;
-			
-			//read from bitcell
-			in = 0;
-            sel = 1;
-            rw = 1;
-            #period;
+			in = 0; sel = 1; rw = 1; #period;
+			in = 0; sel = 1; rw = 0; #period;
+			in = 1; sel = 1; rw = 1; #period;
+			in = 1; sel = 1; rw = 0; #period;
         end
 endmodule

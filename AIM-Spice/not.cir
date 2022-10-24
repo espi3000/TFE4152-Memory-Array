@@ -1,5 +1,7 @@
+*************************************
 * NOT GATE
-.subckt not y noty vdd vss
+*************************************
+.subckt not noty y vdd vss
 .include param.cir
 xmp1 noty y vdd vdd pmos1v l=lp w=wp 
 xmn1 noty y vss vss nmos1v l=ln w=wn 

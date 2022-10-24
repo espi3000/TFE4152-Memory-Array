@@ -1,30 +1,128 @@
-alog -dbg -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
 # Pass 2. Processing instantiations.
 # Pass 3. Processing behavioral statements.
+# Running Optimizer.
 # ELB/DAG code generating.
 # Info: VCP2113 Module \$root found in current working library.
 # Unit top modules: bitcell_tb.
 # $root top modules: bitcell_tb.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # done
 # ELBREAD: Elaboration process.
 # ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.0 [s]
+# SLP: Finished : 1.1 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 1.2 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4105 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:22, mandag 24. oktober 2022
+#  Simulation has been initialized
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/bitcell_tb/in}
+# add wave -noreg {/bitcell_tb/sel}
+# add wave -noreg {/bitcell_tb/rw}
+# add wave -noreg {/bitcell_tb/out}
+# VSIM: 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# KERNEL: Error: KERNEL_0086 "/bitcell_tb/sel" does not have write access. Use switch +access +w for this region.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Warning: VCP2515 bitcell_tb.sv : (8, 61): Undefined module: bitcell_nor was used. Port connection rules will not be checked at such instantiations.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb.
+# $root top modules: bitcell_tb.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2505 bitcell_nor.sv : (4, 16): Duplicate identifier: sr_latch.
+# Error: VCP2562 bitcell_nor.sv : (5, 5): Redeclaration of port s.
+# Error: VCP2562 bitcell_nor.sv : (5, 5): Redeclaration of port r.
+# Error: VCP2562 bitcell_nor.sv : (6, 5): Redeclaration of port q.
+# Error: VCP2562 bitcell_nor.sv : (6, 5): Redeclaration of port not_q.
+# Error: VCP7801 bitcell_nor.sv : (14, 15): Duplicated declaration of unit bitcell.
+# Info: VCP7802 bitcell.sv : (14, 15): bitcell was already declared. See previous declaration.
+# Error: VCP2562 bitcell_nor.sv : (15, 5): Redeclaration of port in.
+# Error: VCP2562 bitcell_nor.sv : (15, 5): Redeclaration of port sel.
+# Error: VCP2562 bitcell_nor.sv : (15, 5): Redeclaration of port rw.
+# Error: VCP2562 bitcell_nor.sv : (16, 5): Redeclaration of port out.
+# Error: VCP2505 bitcell_nor.sv : (17, 34): Duplicate identifier: q.
+# Error: VCP2505 bitcell_nor.sv : (17, 34): Duplicate identifier: not_q.
+# Error: VCP2505 bitcell_nor.sv : (17, 34): Duplicate identifier: s.
+# Error: VCP2505 bitcell_nor.sv : (17, 34): Duplicate identifier: r.
+# Error: VCP2505 bitcell_nor.sv : (20, 36): Duplicate identifier: latch.
+# Warning: VCP2515 bitcell_tb.sv : (8, 61): Undefined module: bitcell_nor was used. Port connection rules will not be checked at such instantiations.
+# Compile failure 15 Errors 1 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2505 bitcell_nor.sv : (4, 16): Duplicate identifier: sr_latch.
+# Error: VCP2562 bitcell_nor.sv : (5, 5): Redeclaration of port s.
+# Error: VCP2562 bitcell_nor.sv : (5, 5): Redeclaration of port r.
+# Error: VCP2562 bitcell_nor.sv : (6, 5): Redeclaration of port q.
+# Error: VCP2562 bitcell_nor.sv : (6, 5): Redeclaration of port not_q.
+# Compile failure 5 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
@@ -39,41 +137,104 @@ asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.6 [s]
-# SLP: Finished : 0.6 [s]
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
 # SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
 # SLP: 17 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.7 [s].
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4106 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\My_Designs\TFE4152-Memory-Array\src\wave.asdb
-#  11:31 AM, Thursday, October 20, 2022
+# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4105 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:25, mandag 24. oktober 2022
 #  Simulation has been initialized
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-alog -dbg -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv
+run
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module bitcell_nor found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4105 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:26, mandag 24. oktober 2022
+#  Simulation has been initialized
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
 # Pass 2. Processing instantiations.
 # Pass 3. Processing behavioral statements.
+# Running Optimizer.
 # ELB/DAG code generating.
 # Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: bitcell_tb.
-# $root top modules: bitcell_tb.
+# Unit top modules: bitcell bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # done
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/bitcell_tb/in}
+# add wave -noreg {/bitcell_tb/sel}
+# add wave -noreg {/bitcell_tb/rw}
+# add wave -noreg {/bitcell_tb/out}
+# VSIM: 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
@@ -88,7 +249,105 @@ asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4105 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:27, mandag 24. oktober 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module bitcell_nor found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:30, mandag 24. oktober 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module bitcell_nor found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb.
+# $root top modules: bitcell_tb bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
 # SLP: Finished : 0.3 [s]
 # SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
 # SLP: 17 (100.00%) signals in SLP and 0 interface signals
@@ -99,83 +358,9 @@ asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4106 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\My_Designs\TFE4152-Memory-Array\src\wave.asdb
-#  11:31 AM, Thursday, October 20, 2022
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:34, mandag 24. oktober 2022
 #  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
-# SLP: 17 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4106 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\My_Designs\TFE4152-Memory-Array\src\wave.asdb
-#  11:31 AM, Thursday, October 20, 2022
-#  Simulation has been initialized
-endsim
-# VSIM: Simulation has finished.
-alog -dbg -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: bitcell_tb.
-# $root top modules: bitcell_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +accb +accr +access +r +m+bitcell_tb bitcell_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.2 [s]
-# SLP: Finished : 0.3 [s]
-# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
-# SLP: 17 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.3 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4667 kB (elbread=427 elab2=4106 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\My_Designs\TFE4152-Memory-Array\src\wave.asdb
-#  11:31 AM, Thursday, October 20, 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.

@@ -4,3 +4,4 @@ i<>.\src\memory_unit.sv
 i<>.\src\memory_unit_tb.sv
 i<>.\src\word.sv
 i<>.\src\word_tb.sv
+i<>.\src\bitcell_nor.sv

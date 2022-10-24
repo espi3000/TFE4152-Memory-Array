@@ -28,6 +28,7 @@ UCF=
 /memory_unit_tb.sv=-1
 /word.sv=-1
 /word_tb.sv=-1
+/bitcell_nor.sv=-1
 [Files.Data]
 .\src\bitcell.sv=SystemVerilog Source Code
 .\src\bitcell_tb.sv=SystemVerilog Source Code
@@ -35,6 +36,7 @@ UCF=
 .\src\memory_unit_tb.sv=SystemVerilog Source Code
 .\src\word.sv=SystemVerilog Source Code
 .\src\word_tb.sv=SystemVerilog Source Code
+.\src\bitcell_nor.sv=SystemVerilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

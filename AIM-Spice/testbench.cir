@@ -1,0 +1,39 @@
+[aimspice]
+[description]
+829
+.include param.cir
+.include gpdk90nm_tt.cir
+
+*******************************************
+* VOLTAGE SOURCE
+*******************************************
+vdd1 vdd 0 dc 1
+vdd2 vss 0 dc 0
+
+*******************************************
+* STIMULI
+*******************************************
+va a vss dc pulse(0 1 0ns 1ps 1ps 100ns 200ns)
+vb b vss dc pulse(0 1 0ns 1ps 1ps 50ns 100ns)
+vc c vss dc pulse(0 1 0ns 1ps 1ps 25ns 50ns)
+
+*******************************************
+* TESTBENCH
+*******************************************
+xmp1 noty a vdd vdd pmos1v l=lp w=wp
+xmp2 noty b vdd vdd pmos1v l=lp w=wp
+xmp3 noty c vdd vdd pmos1v l=lp w=wp
+xmn1 noty a 1 1 nmos1v l=ln w=wn
+xmn2 1 b 2 2 nmos1v l=ln w=wn
+xmn3 2 c vss vss nmos1v l=ln w=wn
+xmp4 y noty vdd vdd pmos1v l=lp w=wp 
+xmn4 y noty vss vss nmos1v l=ln w=wn 
+[tran]
+0.000001ns
+200ns
+X
+X
+0
+[ana]
+4 0
+[end]

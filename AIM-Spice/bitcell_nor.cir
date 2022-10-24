@@ -1,12 +1,12 @@
 [aimspice]
 [description]
-1102
+1114
 *******************************************
 * INCLUDES
 *******************************************
-.include gpdk90nm_ss.cir
+.include gpdk90nm_tt.cir
 .include nand.cir
-.include and.cir
+.include nor.cir
 .include not.cir
 
 *******************************************
@@ -18,9 +18,9 @@ vdd2 vss 0 0
 *******************************************
 * STIMULI
 *******************************************
-vin in vss pulse(0 1 1ns 1ns 1ns 5ms 10ms)
-vsel sel vss pulse(0 1 1ns 1ns 1ns 100ms 200ms)
-vrw rw vss pulse(0 1 1ns 1ns 1ns 50ms 100ms)
+vsel sel vss pulse(0 1 0ns 1ps 1ps 400ns 400ns)
+vrw rw vss pulse(0 1 0ns 1ps 1ps 100ns 200ns)
+vin in vss pulse(0 1 0ns 1ps 1ps 200ns 400ns)
 
 *******************************************
 * SR LATCH
@@ -40,19 +40,23 @@ xnandr r s sel rw vdd vss 3_in_nand
 xnot notsel sel vdd vss not
 xnorout out notq notsel rw vdd vss 3_in_nor
 [tran]
-0.0001
-0.2
+0.000001ns
+400ns
 X
 X
 0
 [ana]
-4 1
+4 2
 0
 1 1
-1 1 -0.5 1.2
-4
-v(in)
+1 1 -0.1 1.5
+1
+v(out)
+0
+1 1
+1 1 -0.1 1.5
+3
 v(sel)
 v(rw)
-v(out)
+v(in)
 [end]

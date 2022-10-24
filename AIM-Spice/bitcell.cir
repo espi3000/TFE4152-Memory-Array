@@ -31,7 +31,7 @@ xnandnotq notq r q vdd vss 2_in_nand
 *******************************************
 * INPUT SELECT
 *******************************************
-xnot rw notrw vdd vss not
+xnot notrw rw vdd vss not
 xnands s in sel notrw vdd vss 3_in_nand
 xnandr r s sel notrw vdd vss 3_in_nand
 
@@ -46,13 +46,5 @@ X
 X
 0
 [ana]
-4 1
-0
-1 1
-1 1 -0.5 1.2
-4
-v(in)
-v(sel)
-v(rw)
-v(out)
+4 0
 [end]

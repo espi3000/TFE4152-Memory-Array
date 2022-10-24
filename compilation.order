@@ -4,3 +4,4 @@
 .\src\memory_unit_tb.sv
 .\src\word.sv
 .\src\word_tb.sv
+.\src\bitcell_nor.sv

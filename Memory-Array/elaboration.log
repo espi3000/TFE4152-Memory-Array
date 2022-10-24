@@ -1,0 +1,25 @@
+Active-HDL 13.0.376.8320 2022-10-24 14:34:08
+
+Elaboration top modules:
+Verilog Module                bitcell_tb
+
+
+------------------------------------------------------------------------------------------------
+Verilog Module          | Library      | Info | Compiler Version          | Compilation Options
+------------------------------------------------------------------------------------------------
+bitcell_tb              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+bitcell_nor             | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+sr_latch_nor            | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+Library                 | Comment
+------------------------------------------------------------------------------------------------
+memory-array            | None
+------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+bitcell_tb bitcell_tb
+
+
+The performance of simulation is reduced. Version Student Edition
