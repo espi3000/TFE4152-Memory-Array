@@ -1,10 +1,10 @@
-module memory_unit(
-
+module decoder(
+        input [2:0] addr,
+        output [7:0] sel
     );
-    
     generate
         for (genvar i = 0; i < 8; i = i + 1) begin
-            word word(.in(in), .out(out[i]), .sel(sel[i]), rw);
+            assign sel = 1 << addr;
         end 
     endgenerate
 endmodule

@@ -1,8 +1,13 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
+UPDATEPROGRESS 5
+UPDATEPROGRESS 10
+UPDATEPROGRESS 15
+UPDATEPROGRESS 20
+UPDATEPROGRESS 25
+UPDATEPROGRESS 30
 UPDATEPROGRESS 35
-MESSAGE_SP VCP2113 "Module bitcell_nor found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
@@ -10,16 +15,22 @@ UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
-UPDATEPROGRESS 82
-UPDATEPROGRESS 85
-UPDATEPROGRESS 88
-UPDATEPROGRESS 91
-UPDATEPROGRESS 94
-UPDATEPROGRESS 97
+UPDATEPROGRESS 81
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 98
+MESSAGE "Unit top modules: bitcell bitcell_tb word_tb decoder_tb."
+MESSAGE "$root top modules: bitcell_tb bitcell memory_unit decoder_tb word_tb."
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: word."
-MESSAGE "$root top modules: bitcell_tb bitcell word."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
 MESSAGE "done"

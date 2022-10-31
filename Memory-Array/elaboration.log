@@ -1,15 +1,14 @@
-Active-HDL 13.0.376.8320 2022-10-31 10:41:46
+Active-HDL 13.0.376.8320 2022-10-31 11:44:20
 
 Elaboration top modules:
-Verilog Module                bitcell_tb
+Verilog Module                decoder_tb
 
 
 ------------------------------------------------------------------------------------------------
 Verilog Module          | Library      | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------
-bitcell_tb              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-bitcell_nor             | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-sr_latch_nor            | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+decoder_tb              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+decoder                 | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
 ------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
@@ -17,3 +16,9 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------
 memory-array            | None
 ------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+decoder_tb decoder_tb
+
+
+The performance of simulation is reduced. Version Student Edition
