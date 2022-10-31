@@ -1,4 +1,4 @@
-timestamp=1666614844268
+timestamp=1667209494145
 
 [~A]
 C:/My_Designs/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv=0*8833*9660
@@ -7,20 +7,21 @@ C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv=0*13308*14173
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv_bitcell_nor.sv=0*23641*24617
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell_tb.sv=0*27337*27915
-LastVerilogToplevel=bitcell_tb
-ModifyID=13
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word.sv=0*30443*30967
+LastVerilogToplevel=word
+ModifyID=15
 Version=74
 
 [~MFT]
-0=6|0Memory-Array.mgf|27915|9793
-1=4|1Memory-Array.mgf|52589|46722
-3=8|3Memory-Array.mgf|21092|19088
+0=6|0Memory-Array.mgf|30967|10898
+1=4|1Memory-Array.mgf|56012|48909
+3=8|3Memory-Array.mgf|22981|20149
 
 [$root]
-A/$root=22|||1*52215
-BinW64/$root=3*20030
-SLP=3*20145
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c92169e6df1fceb2b513d4110e43a4dcd768c
+A/$root=22|||1*55622
+BinW64/$root=3*22304
+SLP=3*22419
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c9216ae689efb116318a695572fde7d0bc769
 
 [bitcell]
 A/bitcell=22|../src/bitcell.sv|14|1*44923
@@ -57,10 +58,18 @@ R=../src/bitcell_nor.sv|4
 SLP=3*18190
 Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c6c228f5e1f60e23ae93a1362d99c4ad786e11c3a7fc4de04c9a7cc8a89e471ae79481652a5b28395be0f9f5134ccef7
 
+[word]
+A/word=22|../src/word.sv|1|1*56012
+BinW64/word=3*22487
+R=../src/word.sv|1
+SLP=3*22981
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|6bd592315211a21487cc78abc5d27936a2ec87c9904a1c8e728e957fe18ad031
+
 [~U]
-$root=12|0*26932|
+$root=12|0*30025|
 bitcell=12|0*22768||0x10
 bitcell_nor=12|0*23204|
 bitcell_tb=12|0*27130||0x10
 sr_latch=12|0*22565|
 sr_latch_nor=12|0*23430|
+word=12|0*30239||0x10

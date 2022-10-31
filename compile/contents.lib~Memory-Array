@@ -1,4 +1,4 @@
-13
+15
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "../src/bitcell.sv" 14 bitcell
@@ -11,3 +11,5 @@
 ~A 1 "../src/bitcell.sv" 4 sr_latch
 ~M 1 "../src/bitcell_nor.sv" 4 sr_latch_nor
 ~A 1 "../src/bitcell_nor.sv" 4 sr_latch_nor
+~M 3 "../src/word.sv" 1 word
+~A 1 "../src/word.sv" 1 word

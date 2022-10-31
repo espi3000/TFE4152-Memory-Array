@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2022-10-24 14:34:08
+Active-HDL 13.0.376.8320 2022-10-31 10:41:46
 
 Elaboration top modules:
 Verilog Module                bitcell_tb
@@ -17,9 +17,3 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------
 memory-array            | None
 ------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+bitcell_tb bitcell_tb
-
-
-The performance of simulation is reduced. Version Student Edition

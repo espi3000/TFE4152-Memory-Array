@@ -16,10 +16,10 @@ UPDATEPROGRESS 88
 UPDATEPROGRESS 91
 UPDATEPROGRESS 94
 UPDATEPROGRESS 97
-MESSAGE "Unit top modules: bitcell_tb."
-MESSAGE "$root top modules: bitcell_tb bitcell."
 UPDATEPROGRESS 100
+MESSAGE "Unit top modules: word."
+MESSAGE "$root top modules: bitcell_tb bitcell word."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
 MESSAGE "done"
