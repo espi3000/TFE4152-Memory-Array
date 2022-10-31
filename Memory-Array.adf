@@ -32,8 +32,6 @@ UCF=
 [Files.Data]
 .\src\bitcell.sv=SystemVerilog Source Code
 .\src\bitcell_tb.sv=SystemVerilog Source Code
-.\src\memory_unit.sv=SystemVerilog Source Code
-.\src\memory_unit_tb.sv=SystemVerilog Source Code
 .\src\word.sv=SystemVerilog Source Code
 .\src\word_tb.sv=SystemVerilog Source Code
 .\src\bitcell_nor.sv=SystemVerilog Source Code

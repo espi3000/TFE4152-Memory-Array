@@ -1,12 +1,16 @@
-module word(
-    input [7:0] in, 
-    output [7:0] out, 
-    input sel, 
-    input rw
+module memory_unit(
+        input i0, i1, i2, i3, i4, i5, i6, i7,
+        input sel,
+        input rw,
+        output o0, o1, o2, o3, o4, o5, o6, o7
     );
-    generate
-        for (genvar i = 0; i < 8; i = i + 1) begin
-            bitcell_nor bitcell(.out(out[i]), .in(in[i]), .sel(sel), .rw(rw));
-        end
-    endgenerate
+
+    bitcell bitcell0(o0, i0, sel, rw);
+    bitcell bitcell1(o1, i1, sel, rw);
+    bitcell bitcell2(o2, i2, sel, rw);
+    bitcell bitcell3(o3, i3, sel, rw);
+    bitcell bitcell4(o4, i4, sel, rw);
+    bitcell bitcell5(o5, i5, sel, rw);
+    bitcell bitcell6(o6, i6, sel, rw);
+    bitcell bitcell7(o7, i7, sel, rw);
 endmodule

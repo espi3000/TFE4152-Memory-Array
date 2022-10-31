@@ -1,9 +1,6 @@
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\bitcell.sv|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\decoder.sv|]
 TemplateId=24
 tab=lu
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\bitcell_tb.sv|]
-TemplateId=24
-tab=lu
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\bitcell_nor.sv|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\decoder_tb.sv|]
 TemplateId=24
 tab=lu

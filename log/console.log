@@ -273,3 +273,34 @@ run
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 endsim
 # VSIM: Simulation has finished.
+asim -O5 +access +r +m+decoder_tb decoder_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 9 (100.00%) other processes in SLP
+# SLP: 4 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 575 kB (elbread=427 elab2=13 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  11:44, mandag 31. oktober 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
