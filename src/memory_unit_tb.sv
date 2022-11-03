@@ -29,21 +29,21 @@ module memory_unit_tb;
 
             addr = 3'b001;
             rw   = 1'b0;        // write
-            in   = 8'b00000001; // write 0 to memory
+            in   = 8'b00000001; // write 1 to memory
             #period;
             rw   = 1'b1;        // read
             #period;
 
             addr = 3'b010;
             rw   = 1'b0;        // write
-            in   = 8'b00000010; // write 0 to memory
+            in   = 8'b00000010; // write 2 to memory
             #period;
             rw   = 1'b1;        // read
             #period;
 
             addr = 3'b011;
             rw   = 1'b0;        // write
-            in   = 8'b00000011; // write 0 to memory
+            in   = 8'b00000011; // write 3 to memory
             #period;
             rw   = 1'b1;        // read
             #period;

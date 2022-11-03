@@ -7,7 +7,12 @@ module word_tb;
 
     localparam period = 20;  
 
-    word DUT(i0, i1, i2, i3, i4, i5, i6, i7, sel, rw, o0, o1, o2, o3, o4, o5, o6, o7);
+    word DUT(
+        in[0], in[1], in[2], in[3], in[4], in[5], in[6], in[7], 
+        sel, 
+        rw, 
+        out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7]
+    );
 
     initial // initial block executes only once
         begin  
