@@ -31,14 +31,14 @@ xnandnotq notq r q vdd vss 2_in_nand
 *******************************************
 * INPUT SELECT
 *******************************************
-xnands s in sel rw vdd vss 3_in_nand
-xnandr r s sel rw vdd vss 3_in_nand
+xnot notsel sel vdd vss not
+xnands s in notsel rw vdd vss 3_in_nand
+xnandr r s notsel rw vdd vss 3_in_nand
 
 *******************************************
 * OUTPUT SELECT
 *******************************************
-xnot notsel sel vdd vss not
-xnorout out notq notsel rw vdd vss 3_in_nor
+xnorout out notq sel rw vdd vss 3_in_nor
 [tran]
 0.000001ns
 400ns
