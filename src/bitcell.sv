@@ -1,11 +1,11 @@
 /*
 * Structure of NAND SR latch
 */
-module sr_latch(q, not_q, s, r);
+module sr_latch(q, _q, s, r);
     input s, r; 
-    output q, not_q; 
-    nand(q, s, not_q);
-    nand(not_q, r, q);
+    output q, _q; 
+    nand(q, s, _q);
+    nand(_q, r, q);
 endmodule
 
 /*
@@ -14,10 +14,10 @@ endmodule
 module bitcell(out, in, sel, rw);
     input in, sel, rw; 
     output out;
-    wire q, not_q, s, r, not_sel; 
-	nand(s, in, sel, rw);
-    nand(r, s, sel, rw);
-    sr_latch latch(q, not_q, s, r);
-    not(not_sel, sel);
-    nor(out, not_q, not_sel, rw);
+    wire q, _q, s, r, _sel; 
+    not(_sel, sel);
+	nand(s, in, _sel, rw);
+    nand(r, s, _sel, rw);
+    sr_latch latch(q, _q, s, r);
+    nor(out, _q, sel, rw);
 endmodule				   	

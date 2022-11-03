@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2022-10-31 11:44:20
+Active-HDL 13.0.376.8320 2022-11-03 11:11:44
 
 Elaboration top modules:
 Verilog Module                decoder_tb
@@ -16,9 +16,3 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------
 memory-array            | None
 ------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+decoder_tb decoder_tb
-
-
-The performance of simulation is reduced. Version Student Edition

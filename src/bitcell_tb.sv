@@ -3,14 +3,22 @@
 module bitcell_tb;
     reg in, sel, rw;
     wire out;
-    // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
+
     localparam period = 20;  
-    bitcell_nor DUT(.out(out), .in(in), .sel(sel), .rw(rw));
+
+    bitcell DUT(out, in, sel, rw);
+
     initial // initial block executes only once
-        begin  
-			in = 0; sel = 1; rw = 1; #period;
-			in = 0; sel = 1; rw = 0; #period;
-			in = 1; sel = 1; rw = 1; #period;
-			in = 1; sel = 1; rw = 0; #period;
+        begin 
+            // Following code is for testing write/read operation
+			sel = 0; in = 0; rw = 1; #period;
+			sel = 0; in = 0; rw = 0; #period;
+			sel = 0; in = 1; rw = 1; #period;
+			sel = 0; in = 1; rw = 0; #period;
+            // Following code is for testing the select function
+            sel = 1; in = 0; rw = 1; #period;
+			sel = 1; in = 0; rw = 0; #period;
+			sel = 1; in = 1; rw = 1; #period;
+			sel = 1; in = 1; rw = 0; #period;
         end
 endmodule

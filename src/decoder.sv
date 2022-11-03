@@ -1,3 +1,6 @@
+/*
+* Structure of 3-to-8 decoder
+*/
 module decoder(
         input adr2, adr1, adr0,
         output sel0, sel1, sel2, sel3, sel4, sel5, sel6, sel7
