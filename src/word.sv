@@ -1,13 +1,16 @@
-/*
-* Structure of byte-sized word
-*/
-module word(
+/**********************************************************************
+ * @brief Structure of byte-sized word
+ * @param i0...i7, inputs bits to write
+ * @param sel, active low select
+ * @param rw, write when high, read when low
+ * @param o0...o7, outputs bits to read
+ **********************************************************************/
+module word (
         input i0, i1, i2, i3, i4, i5, i6, i7,
         input sel,
         input rw,
         output o0, o1, o2, o3, o4, o5, o6, o7
     );
-
     bitcell bitcell0(o0, i0, sel, rw);
     bitcell bitcell1(o1, i1, sel, rw);
     bitcell bitcell2(o2, i2, sel, rw);

@@ -6,3 +6,5 @@ i<>.\src\decoder.sv
 i<>.\src\decoder_tb.sv
 i<>.\src\memory_unit.sv
 i<>.\src\memory_unit_tb.sv
+i<>.\src\and_gate_8.sv
+i<>.\src\and_gate_8_tb.sv

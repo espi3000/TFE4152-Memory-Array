@@ -30,7 +30,8 @@ UCF=
 /decoder_tb.sv=-1
 /memory_unit.sv=-1
 /memory_unit_tb.sv=-1
-/word_tb.sv=-1
+/and_gate_8.sv=-1
+/and_gate_8_tb.sv=-1
 [Files.Data]
 .\src\bitcell.sv=SystemVerilog Source Code
 .\src\bitcell_tb.sv=SystemVerilog Source Code
@@ -40,7 +41,8 @@ UCF=
 .\src\decoder_tb.sv=SystemVerilog Source Code
 .\src\memory_unit.sv=SystemVerilog Source Code
 .\src\memory_unit_tb.sv=SystemVerilog Source Code
-.\src\word_tb.sv=SystemVerilog Source Code
+.\src\and_gate_8.sv=SystemVerilog Source Code
+.\src\and_gate_8_tb.sv=SystemVerilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

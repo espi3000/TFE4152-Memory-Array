@@ -1,786 +1,9 @@
 # ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/bitcell_nor.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP1010 Cannot find source file: C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell_nor.sv
-# Info: VCP2113 Module word found in current working library.
-# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP7801 memory_unit.sv : (4, 19): Duplicated declaration of unit memory_unit.
-# Info: VCP7802 word.sv : (4, 19): memory_unit was already declared. See previous declaration.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i0.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i0.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i1.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i1.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i2.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i2.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i3.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i3.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i4.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i4.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i5.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i5.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i6.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i6.
-# Error: VCP2545 memory_unit.sv : (5, 15): Duplicate port identifier: i7.
-# Error: VCP2562 memory_unit.sv : (5, 15): Redeclaration of port i7.
-# Error: VCP2545 memory_unit.sv : (7, 15): Duplicate port identifier: rw.
-# Error: VCP2562 memory_unit.sv : (7, 15): Redeclaration of port rw.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o0.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o0.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o1.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o1.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o2.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o2.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o3.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o3.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o4.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o4.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o5.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o5.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o6.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o6.
-# Error: VCP2545 memory_unit.sv : (8, 16): Duplicate port identifier: o7.
-# Error: VCP2562 memory_unit.sv : (8, 16): Redeclaration of port o7.
-# Error: VCP2000 memory_unit_tb.sv : (8, 8): Syntax error. Unexpected token: reg[_REG].
-# Error: VCP2000 memory_unit_tb.sv : (10, 9): Syntax error. Unexpected token: wire[_WIRE].
-# Info: VCP2113 Module word found in current working library.
-# Compile failure 37 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: bitcell.
-# $root top modules: bitcell_tb bitcell memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module bitcell found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: bitcell_tb.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module bitcell found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: memory_unit.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Error: VCP2980 word_tb.sv : (16, 1): Variable 'in' cannot be driven by both procedural and continuous assignment.
-# Error: VCP2980 word_tb.sv : (23, 1): Variable 'in' cannot be driven by both procedural and continuous assignment.
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/decoder.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/decoder_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module decoder found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: decoder_tb.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module decoder found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Warning: VCP2595 memory_unit.sv : (14, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 88): Module word has only 4 port(s).
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: memory_unit.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 112 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 memory_unit_tb.sv : (8, 8): Syntax error. Unexpected token: reg[_REG].
-# Error: VCP2000 memory_unit_tb.sv : (10, 9): Syntax error. Unexpected token: wire[_WIRE].
-# Info: VCP2113 Module memory_unit found in current working library.
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 memory_unit_tb.sv : (8, 8): Syntax error. Unexpected token: reg[_REG].
-# Error: VCP2000 memory_unit_tb.sv : (10, 9): Syntax error. Unexpected token: wire[_WIRE].
-# Info: VCP2113 Module memory_unit found in current working library.
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module decoder found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Warning: VCP2595 memory_unit.sv : (13, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (13, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 88): Module word has only 4 port(s).
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: memory_unit.
-# $root top modules: bitcell_tb memory_unit decoder_tb word_tb.
-# Compile success 0 Errors 112 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 memory_unit_tb.sv : (8, 8): Syntax error. Unexpected token: reg[_REG].
-# Error: VCP2000 memory_unit_tb.sv : (10, 9): Syntax error. Unexpected token: wire[_WIRE].
-# Info: VCP2113 Module memory_unit found in current working library.
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module memory_unit found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: memory_unit_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module decoder found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Warning: VCP2595 memory_unit.sv : (14, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 88): Module word has only 4 port(s).
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 112 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Error: VCP2980 word_tb.sv : (16, 1): Variable 'in' cannot be driven by both procedural and continuous assignment.
-# Error: VCP2980 word_tb.sv : (23, 1): Variable 'in' cannot be driven by both procedural and continuous assignment.
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module decoder found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Warning: VCP2595 memory_unit.sv : (14, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (14, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (15, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (16, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (17, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (18, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (19, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (20, 88): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 34): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 38): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 42): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 46): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 52): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 56): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 60): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 64): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 68): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 72): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 76): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 80): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 84): Module word has only 4 port(s).
-# Warning: VCP2595 memory_unit.sv : (21, 88): Module word has only 4 port(s).
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 112 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module bitcell found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Warning: VCP2597 word_tb.sv : (10, 1): Some unconnected ports remain at instance: DUT. Module word has unconnected  port(s) : i4, i5, i6, i7, sel, rw, o0, o1, o2, o3, o4, o5, o6, o7.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: word_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Pass 2. Processing instantiations.
-# Info: VCP2876 word_tb.sv : (10, 16): Implicit net declaration, symbol i0 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 20): Implicit net declaration, symbol i1 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 24): Implicit net declaration, symbol i2 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 28): Implicit net declaration, symbol i3 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 32): Implicit net declaration, symbol i4 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 36): Implicit net declaration, symbol i5 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 40): Implicit net declaration, symbol i6 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 44): Implicit net declaration, symbol i7 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 57): Implicit net declaration, symbol o0 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 61): Implicit net declaration, symbol o1 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 65): Implicit net declaration, symbol o2 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 69): Implicit net declaration, symbol o3 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 73): Implicit net declaration, symbol o4 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 77): Implicit net declaration, symbol o5 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 81): Implicit net declaration, symbol o6 has not been declared in module word_tb.
-# Info: VCP2876 word_tb.sv : (10, 85): Implicit net declaration, symbol o7 has not been declared in module word_tb.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-asim -O5 +access +r +m+decoder_tb decoder_tb
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.2 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 1.6 [s]
-# SLP: Finished : 1.8 [s]
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 25 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 2.0 [s].
-# KERNEL: SLP loading done - time: 0.1 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:14, torsdag 3. november 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/decoder_tb/adr2}
-# add wave -noreg {/decoder_tb/adr1}
-# add wave -noreg {/decoder_tb/adr0}
-# add wave -noreg {/decoder_tb/sel0}
-# add wave -noreg {/decoder_tb/sel1}
-# add wave -noreg {/decoder_tb/sel2}
-# add wave -noreg {/decoder_tb/sel3}
-# add wave -noreg {/decoder_tb/sel4}
-# add wave -noreg {/decoder_tb/sel5}
-# add wave -noreg {/decoder_tb/sel6}
-# add wave -noreg {/decoder_tb/sel7}
-# VSIM: 11 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+decoder_tb decoder_tb
-# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
@@ -793,93 +16,80 @@ asim -O5 +access +r +m+decoder_tb decoder_tb
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Finished. Using existing simulator library
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 25 (100.00%) signals in SLP and 0 interface signals
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
 # ELAB2: Elaboration final pass complete - time: 0.1 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:15, torsdag 3. november 2022
+#  16:27, torsdag 3. november 2022
+#  Simulation has been initialized
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/output_gate_tb/in}
+# add wave -noreg {/output_gate_tb/out}
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:27, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+decoder_tb decoder_tb
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
 # ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 25 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:18, torsdag 3. november 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+decoder_tb decoder_tb
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/output_gate.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
 # ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 25 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:20, torsdag 3. november 2022
-#  Simulation has been initialized
-endsim
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -890,185 +100,46 @@ asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.1 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.5 [s]
-# SLP: Finished : 0.5 [s]
-# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 1022 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.6 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4703 kB (elbread=436 elab2=4132 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:21, torsdag 3. november 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/memory_unit_tb/in}
-# add wave -noreg {/memory_unit_tb/addr}
-# add wave -noreg {/memory_unit_tb/rw}
-# add wave -noreg {/memory_unit_tb/out}
-# VSIM: 4 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 1022 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4703 kB (elbread=436 elab2=4132 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:21, torsdag 3. november 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
 # SLP: Generation phase ... done : 0.4 [s]
 # SLP: Finished : 0.5 [s]
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 142 (100.00%) signals in SLP and 0 interface signals
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
 # ELAB2: Elaboration final pass complete - time: 0.5 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4671 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:26, torsdag 3. november 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-# Warning: WAVEFORM: Object matching /memory_unit_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /memory_unit_tb/addr not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /memory_unit_tb/rw not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /memory_unit_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/word_tb/in}
-# add wave -noreg {/word_tb/sel}
-# add wave -noreg {/word_tb/rw}
-# add wave -noreg {/word_tb/out}
-# add wave -noreg {/word_tb/i0}
-# add wave -noreg {/word_tb/i1}
-# add wave -noreg {/word_tb/i2}
-# add wave -noreg {/word_tb/i3}
-# add wave -noreg {/word_tb/i4}
-# add wave -noreg {/word_tb/i5}
-# add wave -noreg {/word_tb/i6}
-# add wave -noreg {/word_tb/i7}
-# add wave -noreg {/word_tb/o0}
-# add wave -noreg {/word_tb/o1}
-# add wave -noreg {/word_tb/o2}
-# add wave -noreg {/word_tb/o3}
-# add wave -noreg {/word_tb/o4}
-# add wave -noreg {/word_tb/o5}
-# add wave -noreg {/word_tb/o6}
-# add wave -noreg {/word_tb/o7}
-# VSIM: 20 object(s) traced.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 142 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4671 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:26, torsdag 3. november 2022
+#  16:28, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+word_tb word_tb
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/output_gate.sv
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
 # Pass 2. Processing instantiations.
 # Pass 3. Processing behavioral statements.
 # Running Optimizer.
 # ELB/DAG code generating.
 # Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: word_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # done
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
@@ -1080,75 +151,47 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.5 [s]
-# SLP: Finished : 0.6 [s]
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 126 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:36, torsdag 3. november 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/word_tb/in}
-# add wave -noreg {/word_tb/sel}
-# add wave -noreg {/word_tb/rw}
-# add wave -noreg {/word_tb/out}
-# VSIM: 4 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 126 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:36, torsdag 3. november 2022
+#  16:30, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
 # VSIM: Simulation has finished.
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+bitcell_tb bitcell_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/output_gate.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -1157,167 +200,108 @@ asim -O5 +access +r +m+bitcell_tb bitcell_tb
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.5 [s]
-# SLP: Finished : 0.6 [s]
-# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
-# SLP: 17 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:37, torsdag 3. november 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-# Warning: WAVEFORM: Object matching /word_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /word_tb/sel not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /word_tb/rw not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-# Warning: WAVEFORM: Object matching /word_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/bitcell_tb/in}
-# add wave -noreg {/bitcell_tb/sel}
-# add wave -noreg {/bitcell_tb/rw}
-# add wave -noreg {/bitcell_tb/out}
-# VSIM: 4 object(s) traced.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+bitcell_tb bitcell_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
-# SLP: 17 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:38, torsdag 3. november 2022
+#  16:32, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
 # VSIM: Simulation has finished.
+asim -O5 +access +r +m+output_gate_tb output_gate_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 126 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:44, torsdag 3. november 2022
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/word_tb/in}
-# add wave -noreg {/word_tb/sel}
-# add wave -noreg {/word_tb/rw}
-# add wave -noreg {/word_tb/out}
-# VSIM: 4 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 10ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 126 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:44, torsdag 3. november 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+word_tb word_tb
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/output_gate.sv
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
 # Pass 2. Processing instantiations.
 # Pass 3. Processing behavioral statements.
 # Running Optimizer.
 # ELB/DAG code generating.
 # Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: word_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # done
 # ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:33, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Info: VCP2113 Module word found in current working library.
+# Info: VCP2113 Module output_gate found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'memory_unit' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -1333,6 +317,539 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
 # SLP: Generation phase ...
 # SLP: Generation phase ... done : 0.3 [s]
 # SLP: Finished : 0.3 [s]
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1174 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:37, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /output_gate_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /output_gate_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/memory_unit_tb/in}
+# add wave -noreg {/memory_unit_tb/addr}
+# add wave -noreg {/memory_unit_tb/rw}
+# add wave -noreg {/memory_unit_tb/out}
+# VSIM: 4 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'memory_unit' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'output_gate' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1174 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:37, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/output_gate.sv $dsn/src/output_gate_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 output_gate.sv : (3, 10): Syntax error. Unexpected token: input[_INPUT].
+# Error: VCP2000 output_gate.sv : (6, 9): Syntax error. Unexpected token: nand[_NAND].
+# Error: VCP1023 output_gate_tb.sv : (1, 11): Compiler directive `timescale is not allowed inside a module.
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/output_gate.sv $dsn/src/output_gate_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb output_gate_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1174 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:48, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Info: VCP2113 Module word found in current working library.
+# Warning: VCP2515 memory_unit.sv : (31, 81): Undefined module: and_gate_8 was used. Port connection rules will not be checked at such instantiations.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: ELBREAD_0081 memory_unit.sv (31): Design unit and_gate_8 instantiated in memory-array.memory_unit not found in searched libraries: memory-array, Memory-Array.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Info: VCP2113 Module word found in current working library.
+# Warning: VCP2515 memory_unit.sv : (31, 81): Undefined module: and_gate_8 was used. Port connection rules will not be checked at such instantiations.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/and_gate_8.sv $dsn/src/and_gate_8_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb and_gate_8_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1174 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:55, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/memory_unit_tb/in}
+# add wave -noreg {/memory_unit_tb/addr}
+# add wave -noreg {/memory_unit_tb/rw}
+# add wave -noreg {/memory_unit_tb/out}
+# KERNEL: Warning: KERNEL_0291 Object "/memory_unit_tb/in" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/memory_unit_tb/addr" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/memory_unit_tb/rw" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/memory_unit_tb/out" has already been traced.
+# VSIM: 0 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1174 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  16:55, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/and_gate_8.sv $dsn/src/word.sv $dsn/src/decoder.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memory_unit_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'memory_unit' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'decoder' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'word' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'and_gate_8' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1175 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4699 kB (elbread=437 elab2=4128 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  17:28, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/and_gate_8.sv $dsn/src/and_gate_8_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 decoder_tb.sv : (18, 20): sel is not a valid left-hand side of a procedural assignment.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module bitcell found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module bitcell found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/decoder.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Info: VCP2113 Module word found in current working library.
+# Info: VCP2113 Module and_gate_8 found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module memory_unit found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memory_unit_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/and_gate_8.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/and_gate_8_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module and_gate_8 found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: and_gate_8_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/decoder_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 decoder_tb.sv : (18, 20): sel is not a valid left-hand side of a procedural assignment.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module word found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: word_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/decoder_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module decoder found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 decoder_tb.sv : (18, 20): sel is not a valid left-hand side of a procedural assignment.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/and_gate_8.sv $dsn/src/and_gate_8_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb and_gate_8_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 419 (99.76%) primitives and 1 (0.24%) other processes in SLP
+# SLP: 1175 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4699 kB (elbread=437 elab2=4128 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  17:31, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+word_tb word_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
 # SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
 # SLP: 126 (100.00%) signals in SLP and 0 interface signals
 # ELAB2: Elaboration final pass complete - time: 0.4 [s].
@@ -1343,9 +860,20 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:45, torsdag 3. november 2022
+#  17:31, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /memory_unit_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /memory_unit_tb/addr not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /memory_unit_tb/rw not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /memory_unit_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/word_tb/in}
+# add wave -noreg {/word_tb/sel}
+# add wave -noreg {/word_tb/rw}
+# add wave -noreg {/word_tb/out}
+# VSIM: 4 object(s) traced.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
@@ -1358,24 +886,6 @@ asim -O5 +access +r +m+word_tb word_tb
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module word found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: word_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -1383,14 +893,10 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
 # KERNEL: Time resolution set to 10ps.
 # ELAB2: Create instances complete.
 # SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
+# SLP: Finished. Using existing simulator library
 # SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
 # SLP: 126 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
@@ -1398,43 +904,19 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/word_tb.sv
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 4670 kB (elbread=428 elab2=4108 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:47, torsdag 3. november 2022
+#  17:31, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+asim -O5 +access +r +m+decoder_tb decoder_tb
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module memory_unit found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Unit top modules: memory_unit_tb.
-# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
-# ELBREAD: Elaboration time 0.0 [s].
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -1447,17 +929,17 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
 # SLP: Generation phase ...
 # SLP: Generation phase ... done : 0.3 [s]
 # SLP: Finished : 0.4 [s]
-# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 1022 (100.00%) signals in SLP and 0 interface signals
+# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
 # ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4703 kB (elbread=436 elab2=4132 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:49, torsdag 3. november 2022
+#  17:32, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 # Warning: WAVEFORM: Object matching /word_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
@@ -1466,9 +948,45 @@ alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/memory_unit_tb.sv
 # Warning: WAVEFORM: Object matching /word_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/decoder_tb/addr}
+# add wave -noreg {/decoder_tb/sel}
+# VSIM: 2 object(s) traced.
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+asim -O5 +access +r +m+decoder_tb decoder_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  17:32, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
 # ELBREAD: Elaboration process.
 # ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
@@ -1483,30 +1001,57 @@ asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
 # KERNEL: Time resolution set to 10ps.
 # ELAB2: Create instances complete.
 # SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 1022 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4703 kB (elbread=436 elab2=4132 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:49, torsdag 3. november 2022
+#  17:33, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /decoder_tb/addr not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /decoder_tb/sel not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# add wave -noreg {/memory_unit_tb/in}
-# add wave -noreg {/memory_unit_tb/addr}
-# add wave -noreg {/memory_unit_tb/rw}
-# add wave -noreg {/memory_unit_tb/out}
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/_q" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/_sel" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/in" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/out" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/q" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/r" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/rw" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/s" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/sel" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/latch/_q" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/latch/q" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/latch/r" does not have read access. Use switch +access +r for this region.
+# KERNEL: Warning: KERNEL_0085 "/bitcell_tb/DUT/latch/s" does not have read access. Use switch +access +r for this region.
 # VSIM: 4 object(s) traced.
+# wave -rec *
+# add wave -noreg {/bitcell_tb/in}
+# add wave -noreg {/bitcell_tb/sel}
+# add wave -noreg {/bitcell_tb/rw}
+# add wave -noreg {/bitcell_tb/out}
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/in" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/sel" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/rw" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/out" has already been traced.
+# VSIM: 0 object(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+asim -O5 +access +r +m+bitcell_tb bitcell_tb
 # ELBREAD: Elaboration process.
 # ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
 # ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
@@ -1522,18 +1067,101 @@ asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Finished. Using existing simulator library
-# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 1022 (100.00%) signals in SLP and 0 interface signals
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
 # ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 4703 kB (elbread=436 elab2=4132 kernel=134 sdf=0)
+# Allocation: Simulator allocated 4670 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
-#  13:49, torsdag 3. november 2022
+#  17:33, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/in" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/sel" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/rw" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/bitcell_tb/out" has already been traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+and_gate_8_tb and_gate_8_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  17:33, torsdag 3. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /bitcell_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/rw not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/sel not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/in not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/sel not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/rw not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /bitcell_tb/out not found in C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/and_gate_8_tb/in}
+# add wave -noreg {/and_gate_8_tb/out}
+# VSIM: 2 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+and_gate_8_tb and_gate_8_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 3 (75.00%) primitives and 1 (25.00%) other processes in SLP
+# SLP: 14 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4665 kB (elbread=427 elab2=4104 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  17:33, torsdag 3. november 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
 run
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.

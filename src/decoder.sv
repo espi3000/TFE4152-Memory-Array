@@ -1,7 +1,9 @@
-/*
-* Structure of 3-to-8 decoder
-*/
-module decoder(
+/**********************************************************************
+ * @brief Structure of 3-to-8 decoder
+ * @param adr2...adr0, address inputs
+ * @param sel0...sel7, word select outputs
+ **********************************************************************/
+module decoder (
         input adr2, adr1, adr0,
         output sel0, sel1, sel2, sel3, sel4, sel5, sel6, sel7
     );

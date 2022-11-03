@@ -8,17 +8,17 @@ module bitcell_tb;
 
     bitcell DUT(out, in, sel, rw);
 
-    initial // initial block executes only once
-        begin 
-            // Following code is for testing write/read operation
-			sel = 0; in = 0; rw = 1; #period;
-			sel = 0; in = 0; rw = 0; #period;
-			sel = 0; in = 1; rw = 1; #period;
-			sel = 0; in = 1; rw = 0; #period;
-            // Following code is for testing the select function
-            sel = 1; in = 0; rw = 1; #period;
-			sel = 1; in = 0; rw = 0; #period;
-			sel = 1; in = 1; rw = 1; #period;
-			sel = 1; in = 1; rw = 0; #period;
-        end
+    initial
+    begin 
+        // Following code is for testing write/read operation
+		sel = 0; in = 0; rw = 1; #period;
+		sel = 0; in = 0; rw = 0; #period;
+		sel = 0; in = 1; rw = 1; #period;
+		sel = 0; in = 1; rw = 0; #period;
+        // Following code is for testing the select function
+        sel = 1; in = 0; rw = 1; #period;
+		sel = 1; in = 0; rw = 0; #period;
+		sel = 1; in = 1; rw = 1; #period;
+		sel = 1; in = 1; rw = 0; #period;
+    end
 endmodule

@@ -1,41 +1,63 @@
-timestamp=1667479752265
+timestamp=1667493055714
 
 [~A]
 C:/My_Designs/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv=0*8833*9660
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv=0*47832*48375
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/and_gate_8.sv=0*166493*166991
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/and_gate_8_tb.sv=0*168082*168663
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv=0*157391*157934
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_and_gate_8.sv_word.sv_decoder.sv_memory_unit.sv_memory_unit_tb.sv=0*152195*154277
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv=0*11137*11902
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv=0*13308*14173
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_memory_unit.sv_memory_unit_tb.sv_word.sv_word_tb.sv_bitcell_nor.sv=0*23641*24617
 C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_bitcell_nor.sv_decoder.sv_decoder_tb.sv=0*45129*46482
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_decoder.sv_decoder_tb.sv_memory_unit.sv_memory_unit_tb.sv=0*70272*72315
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell_tb.sv=0*49393*49971
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/decoder.sv=0*52729*53288
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/decoder_tb.sv=0*54306*54932
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/memory_unit.sv=0*63364*64007
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/memory_unit_tb.sv=0*78526*79348
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word.sv=0*65149*65705
-C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv=0*76832*77503
-LastVerilogToplevel=memory_unit_tb
-ModifyID=37
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_decoder.sv_decoder_tb.sv_memory_unit.sv_memory_unit_tb.sv=0*82354*84493
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_decoder.sv_decoder_tb.sv_memory_unit.sv_memory_unit_tb.sv_and_gate_8.sv_and_gate_8_tb.sv=0*173881*176531
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_decoder.sv_decoder_tb.sv_memory_unit.sv_memory_unit_tb.sv_output_gate.sv=0*94505*97283
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell.sv_bitcell_tb.sv_word.sv_word_tb.sv_decoder.sv_decoder_tb.sv_memory_unit.sv_memory_unit_tb.sv_output_gate.sv_output_gate_tb.sv=0*135288*138116
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/bitcell_tb.sv=0*159000*159578
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/decoder.sv=0*160696*161255
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/decoder_tb.sv=0*105960*106586
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/memory_unit.sv=0*162485*163593
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/memory_unit_tb.sv=0*164684*165378
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/output_gate.sv=0*128966*129465
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/output_gate_tb.sv=0*98505*99103
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word.sv=0*155561*156117
+C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv=0*169713*170384
+LastVerilogToplevel=and_gate_8_tb
+ModifyID=74
 Version=74
 
 [~MFT]
-0=6|0Memory-Array.mgf|79348|30359
-1=4|1Memory-Array.mgf|163729|143547
-3=8|3Memory-Array.mgf|71457|63462
+0=16|0Memory-Array.mgf|176531|74333
+1=24|1Memory-Array.mgf|467207|434869
+3=48|3Memory-Array.mgf|159096|149151
 
 [$root]
-A/$root=22|||1*163323
-BinW64/$root=3*69741
-SLP=3*69856
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c9216e79668a6fb14655c1aa9ce39fa886185
+A/$root=22|||1*440864
+BinW64/$root=3*151002
+SLP=3*151117
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c92164df90f1bbdca1606f8313c42d3ea5cd4
+
+[and_gate_8]
+A/and_gate_8=22|../src/and_gate_8.sv|6|1*463578
+BinW64/and_gate_8=3*156601
+R=../src/and_gate_8.sv|6
+SLP=3*156721
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|b8de33fb27ab7735e5212618c9c4b44ae3c302e1df6212cbe70ea0afbf7cd36f281a639b2fa3a86f20c87d11ed2ea8f1
+
+[and_gate_8_tb]
+A/and_gate_8_tb=22|../src/and_gate_8_tb.sv|3|1*467207
+BinW64/and_gate_8_tb=3*158385
+R=../src/and_gate_8_tb.sv|3
+SLP=3*159096
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|0714d903325238ae1b82f3481747e30670dc82bcde00c6004d6f9866ce860f12e5ecced68ab522c238ca86a792e88288
 
 [bitcell]
-A/bitcell=22|../src/bitcell.sv|14|1*138875
-BinW64/bitcell=3*56842
-R=../src/bitcell.sv|14
-SLP=3*56959
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|d93070aeb74cc8aef712683f104c8e4b26527262ddaa47cb266f3a3c4d9b973a70b340d2ce68cc257586cb0e71ace2c0
+A/bitcell=22|../src/bitcell.sv|23|1*442298
+BinW64/bitcell=3*151416
+R=../src/bitcell.sv|23
+SLP=3*151533
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|d93070aeb74cc8aef712683f104c8e4b26527262ddaa47cb266f3a3c4d9b973a1378694a4e755a1c8d9c76439eab8778
 
 [bitcell_nor]
 A/bitcell_nor=22|../src/bitcell_nor.sv|14|1*90127
@@ -45,46 +67,60 @@ SLP=3*40487
 Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|6158b6d8dc8a5d70af80ee2a12fb4fbf758e550e10041321562dc522b8fb501c4880fdd4e220ef6386aef81a817017c7
 
 [bitcell_tb]
-A/bitcell_tb=22|../src/bitcell_tb.sv|3|1*140542
-BinW64/bitcell_tb=3*57070
+A/bitcell_tb=22|../src/bitcell_tb.sv|3|1*443965
+BinW64/bitcell_tb=3*151644
 R=../src/bitcell_tb.sv|3
-SLP=3*58135
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|4f50e7a9ca1c59b43f19649954403dc1e0dd7ce006a73f8fd1dd6e554d6a0148fcbb76dec9f3b6d69eb97497d7e590bd
+SLP=3*152709
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|4f50e7a9ca1c59b43f19649954403dc1e0dd7ce006a73f8fd1dd6e554d6a0148019c5af1bd7200fc655917007c2453ce
 
 [decoder]
-A/decoder=22|../src/decoder.sv|4|1*146832
-BinW64/decoder=3*60074
-R=../src/decoder.sv|4
-SLP=3*60191
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|5b5fade5c44e27adecc486171142a1d226527262ddaa47cb266f3a3c4d9b973a048099096ddd33e439aa3a01410be100
+A/decoder=22|../src/decoder.sv|6|1*449217
+BinW64/decoder=3*154903
+R=../src/decoder.sv|6
+SLP=3*155020
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|5b5fade5c44e27adecc486171142a1d226527262ddaa47cb266f3a3c4d9b973a1ec79b1407cee5a2a2bab933be2169f5
 
 [decoder_tb]
-A/decoder_tb=22|../src/decoder_tb.sv|3|1*149697
-BinW64/decoder_tb=3*60324
+A/decoder_tb=22|../src/decoder_tb.sv|3|1*452085
+BinW64/decoder_tb=3*155153
 R=../src/decoder_tb.sv|3
-SLP=3*61400
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c9cf02f7edfc0c3a34b4ed63ff4c6258c9f5c004114aeb36903c07c2be81ea25dda9abff5b65fe5a7a1428ea256620d1
+SLP=3*155855
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c9cf02f7edfc0c3a34b4ed63ff4c6258c9f5c004114aeb36903c07c2be81ea25897748c710a447467666d285b2580ffa
 
 [memory_unit]
-A/memory_unit=22|../src/memory_unit.sv|4|1*151416
-BinW64/memory_unit=3*61867
-R=../src/memory_unit.sv|4
-SLP=3*61988
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|b34c20dbde1f103a532462c55e6b8d0b2ad095b6e80465877f3acc759c911669d070aa1ad088c9108e6245c5789995cb
+A/memory_unit=22|../src/memory_unit.sv|8|1*453646
+BinW64/memory_unit=3*156316
+R=../src/memory_unit.sv|8
+SLP=3*156437
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|b34c20dbde1f103a532462c55e6b8d0b2ad095b6e80465877f3acc759c911669edc690e45a8e72b2911bec23e87d4362
 
 [memory_unit_tb]
-A/memory_unit_tb=22|../src/memory_unit_tb.sv|3|1*163729
-BinW64/memory_unit_tb=3*69924
+A/memory_unit_tb=22|../src/memory_unit_tb.sv|3|1*465304
+BinW64/memory_unit_tb=3*156856
 R=../src/memory_unit_tb.sv|3
-SLP=3*71457
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|887a1ba8d94e9fe35e069ba67f62aeb4356a4ebdc3d14b9ef6c2a411876bf11a4771dd16225f84dcc949581347bfd1f0
+SLP=3*157720
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|887a1ba8d94e9fe35e069ba67f62aeb4356a4ebdc3d14b9ef6c2a411876bf11afa42da2b6eaee468081dcc82a7a0309e
+
+[output_gate]
+A/output_gate=22|../src/output_gate.sv|1|1*336142
+BinW64/output_gate=3*124066
+R=../src/output_gate.sv|1
+SLP=3*124187
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|91eec5f9af7abeba77cfc14126dc2278737cbc4eff46800d1c2db5e501d2681914dae5fe09d58583bd3cd1dae13f5bf3
+
+[output_gate_tb]
+A/output_gate_tb=22|../src/output_gate_tb.sv|3|1*339538
+BinW64/output_gate_tb=3*126963
+R=../src/output_gate_tb.sv|3
+SLP=3*127675
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|20d4a1a92a7dd285321c807643e22896b3d2702ee9883720b9d6da5b6e7cff65e1aa5b84ed61fac9227f4c7c333e664b
 
 [sr_latch]
-A/sr_latch=22|../src/bitcell.sv|4|1*137869
-BinW64/sr_latch=3*56611
-R=../src/bitcell.sv|4
-SLP=3*56729
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|9186e68bbc6b8131b84c5ec4149ba7fce08d679eaf1bc9de9439630905b37e5fc7dcb1785c6fa28541ab3eb894cb8ab1
+A/sr_latch=22|../src/bitcell.sv|8|1*441286
+BinW64/sr_latch=3*151185
+R=../src/bitcell.sv|8
+SLP=3*151303
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|9186e68bbc6b8131b84c5ec4149ba7fce08d679eaf1bc9de9439630905b37e5fcc989f0bdd99bdfa4a87ee60611a8f17
 
 [sr_latch_nor]
 A/sr_latch_nor=22|../src/bitcell_nor.sv|4|1*94654
@@ -94,29 +130,33 @@ SLP=3*42669
 Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c6c228f5e1f60e23ae93a1362d99c4ad786e11c3a7fc4de04c9a7cc8a89e471ac0ffdb33fe8ae4189699bb0fb4752f8c
 
 [word]
-A/word=22|../src/word.sv|4|1*141738
-BinW64/word=3*58604
-R=../src/word.sv|4
-SLP=3*58718
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|6bd592315211a21487cc78abc5d2793686bc564ba926a251aef6cd35e49a0c78
+A/word=22|../src/word.sv|8|1*445161
+BinW64/word=3*153178
+R=../src/word.sv|8
+SLP=3*153292
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|6bd592315211a21487cc78abc5d27936ba90e2781f6115967694648d66332006
 
 [word_tb]
-A/word_tb=22|../src/word_tb.sv|3|1*161812
-BinW64/word_tb=3*68271
+A/word_tb=22|../src/word_tb.sv|3|1*447706
+BinW64/word_tb=3*153433
 R=../src/word_tb.sv|3
-SLP=3*69164
-Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|556651ad83c2c9f4187983c9c1b5ec2d26527262ddaa47cb266f3a3c4d9b973a6630119e7dbaea8e93486a08b3b7bd2d
+SLP=3*154326
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|556651ad83c2c9f4187983c9c1b5ec2d26527262ddaa47cb266f3a3c4d9b973a1ec79b1407cee5a2a2bab933be2169f5
 
 [~U]
-$root=12|0*78071|
-bitcell=12|0*68302|
+$root=12|0*170952|
+and_gate_8=12|0*173195|
+and_gate_8_tb=12|0*173671||0x10
+bitcell=12|0*171429|
 bitcell_nor=12|0*43887|
-bitcell_tb=12|0*68518||0x10
-decoder=12|0*69255|
-decoder_tb=12|0*69492||0x10
-memory_unit=12|0*69696|
-memory_unit_tb=12|0*78317||0x10
-sr_latch=12|0*68103|
+bitcell_tb=12|0*171645||0x10
+decoder=12|0*172382|
+decoder_tb=12|0*172619||0x10
+memory_unit=12|0*172823|
+memory_unit_tb=12|0*173425||0x10
+output_gate=12|0*134598|
+output_gate_tb=12|0*135076||0x10
+sr_latch=12|0*171230|
 sr_latch_nor=12|0*44515|
-word=12|0*68734|
-word_tb=12|0*76634||0x10
+word=12|0*171861|
+word_tb=12|0*172165||0x10

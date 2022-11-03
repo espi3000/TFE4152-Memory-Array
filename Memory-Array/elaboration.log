@@ -1,18 +1,14 @@
-Active-HDL 13.0.376.8320 2022-11-03 13:49:29
+Active-HDL 13.0.376.8320 2022-11-03 17:33:56
 
 Elaboration top modules:
-Verilog Module                memory_unit_tb
+Verilog Module                and_gate_8_tb
 
 
 ------------------------------------------------------------------------------------------------
 Verilog Module          | Library      | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------
-memory_unit_tb          | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-memory_unit             | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-decoder                 | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-word                    | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-bitcell                 | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-sr_latch                | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+and_gate_8_tb           | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+and_gate_8              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
 ------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
@@ -22,7 +18,7 @@ memory-array            | None
 ------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+memory_unit_tb memory_unit_tb
+Simulation Options: asim -O5 +access +r +m+and_gate_8_tb and_gate_8_tb
 
 
 The performance of simulation is reduced. Version Student Edition
