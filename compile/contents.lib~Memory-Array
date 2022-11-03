@@ -1,23 +1,25 @@
-20
+33
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
-~M 3 "../src/bitcell.sv" 14 bitcell
+~M 1 "../src/bitcell.sv" 14 bitcell
 ~A 1 "../src/bitcell.sv" 14 bitcell
 ~M 1 "../src/bitcell_nor.sv" 14 bitcell_nor
 ~A 1 "../src/bitcell_nor.sv" 14 bitcell_nor
 ~M 3 "../src/bitcell_tb.sv" 3 bitcell_tb
 ~A 1 "../src/bitcell_tb.sv" 3 bitcell_tb
-~M 1 "../src/decoder.sv" 1 decoder
-~A 1 "../src/decoder.sv" 1 decoder
+~M 1 "../src/decoder.sv" 4 decoder
+~A 1 "../src/decoder.sv" 4 decoder
 ~M 3 "../src/decoder_tb.sv" 3 decoder_tb
 ~A 1 "../src/decoder_tb.sv" 3 decoder_tb
-~M 3 "../src/decoder.sv" 1 memory_unit
-~A 1 "../src/decoder.sv" 1 memory_unit
+~M 1 "../src/memory_unit.sv" 4 memory_unit
+~A 1 "../src/memory_unit.sv" 4 memory_unit
+~M 3 "../src/memory_unit_tb.sv" 3 memory_unit_tb
+~A 1 "../src/memory_unit_tb.sv" 3 memory_unit_tb
 ~M 1 "../src/bitcell.sv" 4 sr_latch
 ~A 1 "../src/bitcell.sv" 4 sr_latch
 ~M 1 "../src/bitcell_nor.sv" 4 sr_latch_nor
 ~A 1 "../src/bitcell_nor.sv" 4 sr_latch_nor
-~M 1 "../src/word.sv" 1 word
-~A 1 "../src/word.sv" 1 word
+~M 1 "../src/word.sv" 4 word
+~A 1 "../src/word.sv" 4 word
 ~M 3 "../src/word_tb.sv" 3 word_tb
 ~A 1 "../src/word_tb.sv" 3 word_tb

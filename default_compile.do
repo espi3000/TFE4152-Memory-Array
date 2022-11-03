@@ -1,0 +1,8 @@
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/bitcell.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/bitcell_tb.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/word.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/word_tb.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/decoder.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/decoder_tb.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/memory_unit.sv"
+alog -O2 -protect 0 -msg 5 -sve "$dsn/src/memory_unit_tb.sv"

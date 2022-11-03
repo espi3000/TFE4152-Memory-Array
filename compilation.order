@@ -2,6 +2,7 @@
 .\src\bitcell_tb.sv
 .\src\word.sv
 .\src\word_tb.sv
-.\src\bitcell_nor.sv
 .\src\decoder.sv
 .\src\decoder_tb.sv
+.\src\memory_unit.sv
+.\src\memory_unit_tb.sv

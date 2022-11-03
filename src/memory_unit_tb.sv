@@ -4,8 +4,8 @@ module memory_unit_tb;
     reg [7:0] in;
     //reg i0, i1, i2, i3, i4, i5, i6, i7,
     //reg adr2, adr1, adr0,
-    reg [2:0] addr,
-    reg rw,
+    reg [2:0] addr;
+    reg rw;
     //wire o0, o1, o2, o3, o4, o5, o6, o7
     wire [7:0] out;
     

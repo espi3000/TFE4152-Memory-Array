@@ -1,7 +1,7 @@
 /*
 * Structure of byte-sized word
 */
-module memory_unit(
+module word(
         input i0, i1, i2, i3, i4, i5, i6, i7,
         input sel,
         input rw,
