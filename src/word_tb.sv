@@ -17,17 +17,17 @@ module word_tb;
     initial // initial block executes only once
         begin  
 			sel = 1'b0;        // select on
-            rw  = 1'b0;        // write
+            rw  = 1'b1;        // write
             in  = 8'b10101010; // write to word
             #period;
-            rw  = 1'b1;        // read
+            rw  = 1'b0;        // read
             #period;
 
-            sel = 1'b0;        // select off
-            rw  = 1'b0;        // write
+            sel = 1'b1;        // select off
+            rw  = 1'b1;        // write
             in  = 8'b11111111; // write to word
             #period;
-            rw  = 1'b1;        // read
+            rw  = 1'b0;        // read
             #period;
         end
 endmodule

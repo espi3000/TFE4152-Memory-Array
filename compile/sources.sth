@@ -2,4 +2,6 @@
 C:\Aldec\Active-HDL-Student-Edition\vlib\std/src/standard.vhd=S
 C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/bitcell.sv=S
 C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/word.sv=S
-C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/word_tb.sv=S
+C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/decoder.sv=S
+C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/memory_unit.sv=S
+C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array/src/memory_unit_tb.sv=S

@@ -1,51 +1,25 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
-UPDATEPROGRESS 4
-UPDATEPROGRESS 8
-UPDATEPROGRESS 13
-UPDATEPROGRESS 17
-UPDATEPROGRESS 21
-UPDATEPROGRESS 26
-UPDATEPROGRESS 30
 UPDATEPROGRESS 35
+MESSAGE_SP VCP2113 "Module memory_unit found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i0 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  16
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i1 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  20
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i2 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  24
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i3 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  28
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i4 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  32
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i5 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  36
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i6 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  40
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol i7 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  44
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o0 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  57
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o1 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  61
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o2 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  65
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o3 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  69
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o4 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  73
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o5 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  77
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o6 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  81
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol o7 has not been declared in module word_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/word_tb.sv" 10  85
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
 UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
-UPDATEPROGRESS 81
-UPDATEPROGRESS 83
-UPDATEPROGRESS 84
-UPDATEPROGRESS 86
+UPDATEPROGRESS 82
+UPDATEPROGRESS 85
 UPDATEPROGRESS 87
-UPDATEPROGRESS 89
 UPDATEPROGRESS 90
 UPDATEPROGRESS 92
-UPDATEPROGRESS 93
 UPDATEPROGRESS 95
-UPDATEPROGRESS 96
-MESSAGE "Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb."
-MESSAGE "$root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb."
+UPDATEPROGRESS 97
 UPDATEPROGRESS 100
+MESSAGE "Unit top modules: memory_unit_tb."
+MESSAGE "$root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."

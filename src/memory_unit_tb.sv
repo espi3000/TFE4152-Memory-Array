@@ -21,59 +21,59 @@ module memory_unit_tb;
     initial // initial block executes only once
         begin 
             addr = 3'b000;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000000; // write 0 to memory
             #period;
             rw   = 1'b1;        // read
             #period;
 
             addr = 3'b001;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000001; // write 1 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b010;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000010; // write 2 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b011;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000011; // write 3 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b100;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000100; // write 0 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b101;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000101; // write 0 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b110;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000110; // write 0 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
 
             addr = 3'b111;
-            rw   = 1'b0;        // write
+            rw   = 1'b1;        // write
             in   = 8'b00000111; // write 0 to memory
             #period;
-            rw   = 1'b1;        // read
+            rw   = 1'b0;        // read
             #period;
         end
 endmodule
