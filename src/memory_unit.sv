@@ -32,12 +32,12 @@ module memory_unit(
     word word6(i0, i1, i2, i3, i4, i5, i6, i7, sel6, rw, o6_0, o6_1, o6_2, o6_3, o6_4, o6_5, o6_6, o6_7);
     word word7(i0, i1, i2, i3, i4, i5, i6, i7, sel7, rw, o7_0, o7_1, o7_2, o7_3, o7_4, o7_5, o7_6, o7_7);
 
-    and_gate_8 output_gate0(o0, o0_0, o1_0, o2_0, o3_0, o4_0, o5_0, o6_0, o7_0); // 0th output bit
-    and_gate_8 output_gate1(o1, o0_1, o1_1, o2_1, o3_1, o4_1, o5_1, o6_1, o7_1); // 1th output bit 
-    and_gate_8 output_gate2(o2, o0_2, o1_2, o2_2, o3_2, o4_2, o5_2, o6_2, o7_2); // 2th output bit
-    and_gate_8 output_gate3(o3, o0_3, o1_3, o2_3, o3_3, o4_3, o5_3, o6_3, o7_3); // 3th output bit
-    and_gate_8 output_gate4(o4, o0_4, o1_4, o2_4, o3_4, o4_4, o5_4, o6_4, o7_4); // 4th output bit
-    and_gate_8 output_gate5(o5, o0_5, o1_5, o2_5, o3_5, o4_5, o5_5, o6_5, o7_5); // 5th output bit
-    and_gate_8 output_gate6(o6, o0_6, o1_6, o2_6, o3_6, o4_6, o5_6, o6_6, o7_6); // 6th output bit
-    and_gate_8 output_gate7(o7, o0_7, o1_7, o2_7, o3_7, o4_7, o5_7, o6_7, o7_7); // 7th output bit
+    or_gate_8 output_gate0(o0, o0_0, o1_0, o2_0, o3_0, o4_0, o5_0, o6_0, o7_0); // 0th output bit
+    or_gate_8 output_gate1(o1, o0_1, o1_1, o2_1, o3_1, o4_1, o5_1, o6_1, o7_1); // 1th output bit 
+    or_gate_8 output_gate2(o2, o0_2, o1_2, o2_2, o3_2, o4_2, o5_2, o6_2, o7_2); // 2th output bit
+    or_gate_8 output_gate3(o3, o0_3, o1_3, o2_3, o3_3, o4_3, o5_3, o6_3, o7_3); // 3th output bit
+    or_gate_8 output_gate4(o4, o0_4, o1_4, o2_4, o3_4, o4_4, o5_4, o6_4, o7_4); // 4th output bit
+    or_gate_8 output_gate5(o5, o0_5, o1_5, o2_5, o3_5, o4_5, o5_5, o6_5, o7_5); // 5th output bit
+    or_gate_8 output_gate6(o6, o0_6, o1_6, o2_6, o3_6, o4_6, o5_6, o6_6, o7_6); // 6th output bit
+    or_gate_8 output_gate7(o7, o0_7, o1_7, o2_7, o3_7, o4_7, o5_7, o6_7, o7_7); // 7th output bit
 endmodule

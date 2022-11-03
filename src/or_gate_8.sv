@@ -3,7 +3,7 @@
  * @param o, output
  * @param i0...i7, inputs
  **********************************************************************/
-module and_gate_8(
+module or_gate_8(
         output o,
         input i0, i1, i2, i3, i4, i5, i6, i7
     );
