@@ -1,3 +1,6 @@
+/*
+* 8x8 byte memory unit
+*/
 module memory_unit(
         input i0, i1, i2, i3, i4, i5, i6, i7,
         input adr2, adr1, adr0,
