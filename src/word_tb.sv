@@ -18,7 +18,7 @@ module word_tb;
         begin  
 			sel = 1'b0;        // select on
             rw  = 1'b1;        // write
-            in  = 8'b10101010; // write to word
+            in  = 8'b01010101; // write to word
             #period;
             rw  = 1'b0;        // read
             #period;
