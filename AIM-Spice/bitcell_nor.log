@@ -7,7 +7,7 @@
                  *                                           *
                  *********************************************
 
-	Date: Mon Oct 24 16:37:04 2022
+	Date: Sat Nov  5 15:12:56 2022
 	Circuit File: C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\AIM-Spice\bitcell_nor.cir
 	Analysis: Transient
 
@@ -152,120 +152,134 @@
    137:  *************************************
    138:  .subckt 3_in_nand y a b c vdd vss
    139:  *include param.cir
-   140:  .param ln = 0.1u
-   141:  .param lp = 0.1u
-   142:  .param wn = 0.1u
-   143:  .param wp = 0.1u
-   144:  *end of: param.cir
-   145:  xmp1 y a vdd vdd pmos1v l=lp w=wp
-   146:  xmp2 y b vdd vdd pmos1v l=lp w=wp
-   147:  xmp3 y c vdd vdd pmos1v l=lp w=wp
-   148:  xmn1 y a 1 1 nmos1v l=ln w=wn
-   149:  xmn2 1 b 2 2 nmos1v l=ln w=wn
-   150:  xmn3 2 c vss vss nmos1v l=ln w=wn
-   151:  .ends
-   152:  
-   153:  *************************************
-   154:  * 2 INPUT NAND GATE
-   155:  *************************************
-   156:  .subckt 2_in_nand y a b vdd vss
-   157:  *include param.cir
-   158:  .param ln = 0.1u
-   159:  .param lp = 0.1u
-   160:  .param wn = 0.1u
-   161:  .param wp = 0.1u
-   162:  *end of: param.cir
-   163:  xmp1 y a vdd vdd pmos1v l=lp w=wp
-   164:  xmp2 y b vdd vdd pmos1v l=lp w=wp
-   165:  xmn1 y a 1 1 nmos1v l=ln w=wn
-   166:  xmn2 1 b vss vss nmos1v l=ln w=wn
-   167:  .ends
-   168:  *end of: nand.cir
-   169:  *include nor.cir
-   170:  *************************************
-   171:  * 3 INPUT NOR GATE
-   172:  *************************************
-   173:  .subckt 3_in_nor y a b c vdd vss
-   174:  *include param.cir
-   175:  .param ln = 0.1u
-   176:  .param lp = 0.1u
-   177:  .param wn = 0.1u
-   178:  .param wp = 0.1u
-   179:  *end of: param.cir
-   180:  xmp1 1 a vdd vdd pmos1v l=lp w=wp
-   181:  xmp2 2 b 1 1 pmos1v l=lp w=wp
-   182:  xmp3 y c 2 2 pmos1v l=lp w=wp
-   183:  xmn1 y a vss vss nmos1v l=ln w=wn
-   184:  xmn2 y b vss vss nmos1v l=ln w=wn
-   185:  xmn3 y c vss vss nmos1v l=ln w=wn
-   186:  .ends
-   187:  
-   188:  *************************************
-   189:  * 2 INPUT NOR GATE
-   190:  *************************************
-   191:  .subckt 2_in_nor y a b vdd vss
-   192:  *include param.cir
-   193:  .param ln = 0.1u
-   194:  .param lp = 0.1u
-   195:  .param wn = 0.1u
-   196:  .param wp = 0.1u
-   197:  *end of: param.cir
-   198:  xmp1 1 a vdd vdd pmos1v l=lp w=wp
-   199:  xmp2 y b 1 1 pmos1v l=lp w=wp
-   200:  xmn1 y a vss vss nmos1v l=ln w=wn
-   201:  xmn2 y b vss vss nmos1v l=ln w=wn
-   202:  .ends
-   203:  *end of: nor.cir
-   204:  *include not.cir
-   205:  *************************************
-   206:  * NOT GATE
-   207:  *************************************
-   208:  .subckt not noty y vdd vss
-   209:  *include param.cir
-   210:  .param ln = 0.1u
-   211:  .param lp = 0.1u
-   212:  .param wn = 0.1u
-   213:  .param wp = 0.1u
-   214:  *end of: param.cir
-   215:  xmp1 noty y vdd vdd pmos1v l=lp w=wp 
-   216:  xmn1 noty y vss vss nmos1v l=ln w=wn 
-   217:  .ends
-   218:  *end of: not.cir
-   219:  
-   220:  *******************************************
-   221:  * VOLTAGE SOURCE
-   222:  *******************************************
-   223:  vdd1 vdd 0 1
-   224:  vdd2 vss 0 0
-   225:  
-   226:  *******************************************
-   227:  * STIMULI
-   228:  *******************************************
-   229:  vsel sel vss pulse(0 1 0ns 1ps 1ps 400ns 400ns)
-   230:  vrw rw vss pulse(0 1 0ns 1ps 1ps 100ns 200ns)
-   231:  vin in vss pulse(0 1 0ns 1ps 1ps 200ns 400ns)
-   232:  
-   233:  *******************************************
-   234:  * SR LATCH
+   140:  *************************************
+   141:  * PARAMS
+   142:  *************************************
+   143:  .param ln = 90n
+   144:  .param lp = 90n
+   145:  .param wn = 90n
+   146:  .param wp = 900n
+   147:  *end of: param.cir
+   148:  xmp1 y a vdd vdd pmos1v l=lp w=wp
+   149:  xmp2 y b vdd vdd pmos1v l=lp w=wp
+   150:  xmp3 y c vdd vdd pmos1v l=lp w=wp
+   151:  xmn1 y a 1 1 nmos1v l=ln w=wn
+   152:  xmn2 1 b 2 2 nmos1v l=ln w=wn
+   153:  xmn3 2 c vss vss nmos1v l=ln w=wn
+   154:  .ends
+   155:  
+   156:  *************************************
+   157:  * 2 INPUT NAND GATE
+   158:  *************************************
+   159:  .subckt 2_in_nand y a b vdd vss
+   160:  *include param.cir
+   161:  *************************************
+   162:  * PARAMS
+   163:  *************************************
+   164:  .param ln = 90n
+   165:  .param lp = 90n
+   166:  .param wn = 90n
+   167:  .param wp = 900n
+   168:  *end of: param.cir
+   169:  xmp1 y a vdd vdd pmos1v l=lp w=wp
+   170:  xmp2 y b vdd vdd pmos1v l=lp w=wp
+   171:  xmn1 y a 1 1 nmos1v l=ln w=wn
+   172:  xmn2 1 b vss vss nmos1v l=ln w=wn
+   173:  .ends
+   174:  *end of: nand.cir
+   175:  *include nor.cir
+   176:  *************************************
+   177:  * 3 INPUT NOR GATE
+   178:  *************************************
+   179:  .subckt 3_in_nor y a b c vdd vss
+   180:  *include param.cir
+   181:  *************************************
+   182:  * PARAMS
+   183:  *************************************
+   184:  .param ln = 90n
+   185:  .param lp = 90n
+   186:  .param wn = 90n
+   187:  .param wp = 900n
+   188:  *end of: param.cir
+   189:  xmp1 1 a vdd vdd pmos1v l=lp w=wp
+   190:  xmp2 2 b 1 1 pmos1v l=lp w=wp
+   191:  xmp3 y c 2 2 pmos1v l=lp w=wp
+   192:  xmn1 y a vss vss nmos1v l=ln w=wn
+   193:  xmn2 y b vss vss nmos1v l=ln w=wn
+   194:  xmn3 y c vss vss nmos1v l=ln w=wn
+   195:  .ends
+   196:  
+   197:  *************************************
+   198:  * 2 INPUT NOR GATE
+   199:  *************************************
+   200:  .subckt 2_in_nor y a b vdd vss
+   201:  *include param.cir
+   202:  *************************************
+   203:  * PARAMS
+   204:  *************************************
+   205:  .param ln = 90n
+   206:  .param lp = 90n
+   207:  .param wn = 90n
+   208:  .param wp = 900n
+   209:  *end of: param.cir
+   210:  xmp1 1 a vdd vdd pmos1v l=lp w=wp
+   211:  xmp2 y b 1 1 pmos1v l=lp w=wp
+   212:  xmn1 y a vss vss nmos1v l=ln w=wn
+   213:  xmn2 y b vss vss nmos1v l=ln w=wn
+   214:  .ends
+   215:  *end of: nor.cir
+   216:  *include not.cir
+   217:  *************************************
+   218:  * NOT GATE
+   219:  *************************************
+   220:  .subckt not noty y vdd vss
+   221:  *include param.cir
+   222:  *************************************
+   223:  * PARAMS
+   224:  *************************************
+   225:  .param ln = 90n
+   226:  .param lp = 90n
+   227:  .param wn = 90n
+   228:  .param wp = 900n
+   229:  *end of: param.cir
+   230:  xmp1 noty y vdd vdd pmos1v l=lp w=wp 
+   231:  xmn1 noty y vss vss nmos1v l=ln w=wn 
+   232:  .ends
+   233:  *end of: not.cir
+   234:  
    235:  *******************************************
-   236:  xnandq q s notq vdd vss 2_in_nand
-   237:  xnandnotq notq r q vdd vss 2_in_nand
-   238:  
-   239:  *******************************************
-   240:  * INPUT SELECT
+   236:  * VOLTAGE SOURCE
+   237:  *******************************************
+   238:  vdd1 vdd 0 1
+   239:  vdd2 vss 0 0
+   240:  
    241:  *******************************************
-   242:  xnands s in sel rw vdd vss 3_in_nand
-   243:  xnandr r s sel rw vdd vss 3_in_nand
-   244:  
-   245:  *******************************************
-   246:  * OUTPUT SELECT
-   247:  *******************************************
-   248:  xnot notsel sel vdd vss not
-   249:  xnorout out notq notsel rw vdd vss 3_in_nor
-   250:  
-   251:  
-   252:  
-   253:  .tran 0.000001ns 400ns
+   242:  * STIMULI
+   243:  *******************************************
+   244:  vsel sel vss pulse(1 0 0ps 0ps 0ps 4000ps 4000ps)
+   245:  vrw rw vss pulse(0 1 0ps 0ps 0ps 1000ps 2000ps)
+   246:  vin in vss pulse(0 1 0ps 0ps 0ps 2000ps 4000ps)
+   247:  
+   248:  *******************************************
+   249:  * SR LATCH
+   250:  *******************************************
+   251:  xnandq q s notq vdd vss 2_in_nand
+   252:  xnandnotq notq r q vdd vss 2_in_nand
+   253:  
+   254:  *******************************************
+   255:  * INPUT SELECT
+   256:  *******************************************
+   257:  xnot notsel sel vdd vss not
+   258:  xnands s in notsel rw vdd vss 3_in_nand
+   259:  xnandr r s notsel rw vdd vss 3_in_nand
+   260:  
+   261:  *******************************************
+   262:  * OUTPUT SELECT
+   263:  *******************************************
+   264:  xnorout out notq sel rw vdd vss 3_in_nor
+   265:  
+   266:  
+   267:  .tran 0.00001ps 4000ps
 
 ***************************  Model Parameters  ****************************
 
@@ -276,8 +290,8 @@
 
 **************************  Analysis Parameters  **************************
 
-	Stepsize ............ : 0.000001ns
-	Final time .......... : 400ns
+	Stepsize ............ : 0.00001ps
+	Final time .......... : 4000ps
 	Use Initial Conditions: Off
 
 
@@ -288,18 +302,18 @@
 
 *************************  Simulation Statistics  *************************
 
-	Total number of iterations.....................: 512
-	Number of iterations for transient analysis....: 483
-	Total number of timepoints.....................: 155
-	Number of timepoints accepted..................: 155
+	Total number of iterations.....................: 305
+	Number of iterations for transient analysis....: 275
+	Total number of timepoints.....................: 83
+	Number of timepoints accepted..................: 83
 	Number of timepoints rejected..................: 0
-	Total analysis time (sec)......................: 0.109
-	Transient analysis time (sec)..................: 0.094
-	Time spent in device loading (sec).............: 0.025
-	Time spent in L-U decomposition (sec)..........: 0.002
+	Total analysis time (sec)......................: 0.086
+	Transient analysis time (sec)..................: 0.032
+	Time spent in device loading (sec).............: 0.011
+	Time spent in L-U decomposition (sec)..........: 0
 	Time spent in matrix reordering (sec)..........: 0
 	Time spent in matrix solving (sec).............: 0
-	Time spent in transient L-U decomposition (sec): 0.002
+	Time spent in transient L-U decomposition (sec): 0
 	Time spent in transient matrix solving (sec)...: 0
 
 ***************************  Kernel Messages  *****************************
@@ -322,10 +336,6 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = norout:mp2:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = norout:mp1:gpdk090_pmos1v_x
-BSIM3 v3.3.0 Parameter Checking.
-Model = not:mn1:gpdk090_nmos1v_x
-BSIM3 v3.3.0 Parameter Checking.
-Model = not:mp1:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -350,6 +360,10 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp2:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp1:gpdk090_pmos1v_x
+BSIM3 v3.3.0 Parameter Checking.
+Model = not:mn1:gpdk090_nmos1v_x
+BSIM3 v3.3.0 Parameter Checking.
+Model = not:mp1:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -386,10 +400,6 @@ Model = norout:mp2:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = norout:mp1:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
-Model = not:mn1:gpdk090_nmos1v_x
-BSIM3 v3.3.0 Parameter Checking.
-Model = not:mp1:gpdk090_pmos1v_x
-BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn2:gpdk090_nmos1v_x
@@ -413,6 +423,10 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp2:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp1:gpdk090_pmos1v_x
+BSIM3 v3.3.0 Parameter Checking.
+Model = not:mn1:gpdk090_nmos1v_x
+BSIM3 v3.3.0 Parameter Checking.
+Model = not:mp1:gpdk090_pmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.

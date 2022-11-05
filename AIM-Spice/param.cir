@@ -1,7 +1,7 @@
 *************************************
 * PARAMS
 *************************************
-.param ln = 0.1u
-.param lp = 0.1u
-.param wn = 0.1u
-.param wp = 0.1u
+.param ln = 90n
+.param lp = 90n
+.param wn = 90n
+.param wp = 300n

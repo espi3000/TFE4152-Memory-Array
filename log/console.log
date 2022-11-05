@@ -1,0 +1,746 @@
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2020 finite_state_machine_tb.sv : (48, 5): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 finite_state_machine_tb.sv : (48, 5): Syntax error. Unexpected token: end[_END].
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module finite_state_machine found in current working library.
+# Info: VCP2113 Module memory_unit found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2020 finite_state_machine_tb.sv : (48, 5): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 finite_state_machine_tb.sv : (48, 5): Syntax error. Unexpected token: end[_END].
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module finite_state_machine found in current working library.
+# Info: VCP2113 Module memory_unit found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# KERNEL: stopped at time: 167847190 ns
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'finite_state_machine' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'd_flipflop' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  13:50, lørdag 5. november 2022
+#  Simulation has been initialized
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (48): $finish called.
+# KERNEL: Time: 540 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#26_1@.
+# KERNEL: stopped at time: 540 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# add wave -noreg {/finite_state_machine_tb/name_in}
+# add wave -noreg {/finite_state_machine_tb/name_out}
+# add wave -noreg {/finite_state_machine_tb/in}
+# add wave -noreg {/finite_state_machine_tb/addr}
+# add wave -noreg {/finite_state_machine_tb/r}
+# add wave -noreg {/finite_state_machine_tb/w}
+# add wave -noreg {/finite_state_machine_tb/clk}
+# add wave -noreg {/finite_state_machine_tb/rw}
+# add wave -noreg {/finite_state_machine_tb/out}
+# VSIM: 9 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'finite_state_machine' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'd_flipflop' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  13:50, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (48): $finish called.
+# KERNEL: Time: 540 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#26_1@.
+# KERNEL: stopped at time: 540 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  13:51, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (47): $finish called.
+# KERNEL: Time: 540 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 540 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  13:59, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (48): $finish called.
+# KERNEL: Time: 540 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 540 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:04, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (48): $finish called.
+# KERNEL: Time: 560 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 560 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module finite_state_machine found in current working library.
+# Info: VCP2113 Module memory_unit found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:18, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 637310 ns
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:18, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 9653400 ns
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module finite_state_machine found in current working library.
+# Info: VCP2113 Module memory_unit found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:19, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (48): $finish called.
+# KERNEL: Time: 560 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 560 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.8 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4706 kB (elbread=437 elab2=4134 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:38, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 880 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 880 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4706 kB (elbread=437 elab2=4134 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:40, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 880 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 880 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 finite_state_machine.sv : (41, 13): Implicit net declaration, symbol _clk has not been declared in module d_flipflop.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 436 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1213 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4705 kB (elbread=437 elab2=4133 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:43, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 560 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 560 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4706 kB (elbread=437 elab2=4134 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:43, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 880 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 880 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4707 kB (elbread=437 elab2=4135 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:49, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 592 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 592 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k12 -work Memory-Array $dsn/src/bitcell.sv $dsn/src/bitcell_tb.sv $dsn/src/word.sv $dsn/src/word_tb.sv $dsn/src/decoder.sv $dsn/src/decoder_tb.sv $dsn/src/memory_unit.sv $dsn/src/memory_unit_tb.sv $dsn/src/or_gate_8.sv $dsn/src/or_gate_8_tb.sv $dsn/src/finite_state_machine.sv $dsn/src/finite_state_machine_tb.sv
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb.
+# $root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'sr_latch' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'bitcell' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 10ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 434 (99.54%) primitives and 2 (0.46%) other processes in SLP
+# SLP: 1211 (99.84%) signals in SLP and 2 (0.16%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4706 kB (elbread=437 elab2=4134 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\src\wave.asdb
+#  14:51, lørdag 5. november 2022
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/wave.asdb'.
+run
+# RUNTIME: Info: RUNTIME_0068 finite_state_machine_tb.sv (50): $finish called.
+# KERNEL: Time: 576 ns,  Iteration: 0,  Instance: /finite_state_machine_tb,  Process: @INITIAL#25_1@.
+# KERNEL: stopped at time: 576 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.

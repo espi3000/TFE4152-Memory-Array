@@ -1,6 +1,6 @@
 [aimspice]
 [description]
-1114
+1121
 *******************************************
 * INCLUDES
 *******************************************
@@ -18,9 +18,9 @@ vdd2 vss 0 0
 *******************************************
 * STIMULI
 *******************************************
-vsel sel vss pulse(0 1 0ns 1ps 1ps 400ns 400ns)
-vrw rw vss pulse(0 1 0ns 1ps 1ps 100ns 200ns)
-vin in vss pulse(0 1 0ns 1ps 1ps 200ns 400ns)
+vsel sel vss pulse(1 0 0ps 0ps 0ps 4000ps 4000ps)
+vrw rw vss pulse(0 1 0ps 0ps 0ps 1000ps 2000ps)
+vin in vss pulse(0 1 0ps 0ps 0ps 2000ps 4000ps)
 
 *******************************************
 * SR LATCH
@@ -39,9 +39,11 @@ xnandr r s notsel rw vdd vss 3_in_nand
 * OUTPUT SELECT
 *******************************************
 xnorout out notq sel rw vdd vss 3_in_nor
+
+
 [tran]
-0.000001ns
-400ns
+0.00001ps
+4000ps
 X
 X
 0
@@ -49,12 +51,12 @@ X
 4 2
 0
 1 1
-1 1 -0.1 1.5
+1 1 -0.184768 1.13974
 1
 v(out)
 0
 1 1
-1 1 -0.1 1.5
+1 1 -0.0523179 1.03907
 3
 v(sel)
 v(rw)
