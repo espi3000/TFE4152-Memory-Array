@@ -6,5 +6,7 @@
 .\src\decoder_tb.sv
 .\src\memory_unit.sv
 .\src\memory_unit_tb.sv
-.\src\and_gate_8.sv
-.\src\and_gate_8_tb.sv
+.\src\or_gate_8.sv
+.\src\or_gate_8_tb.sv
+.\src\finite_state_machine.sv
+.\src\finite_state_machine_tb.sv

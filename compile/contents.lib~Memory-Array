@@ -1,4 +1,4 @@
-74
+89
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "../src/and_gate_8.sv" 6 and_gate_8
@@ -11,14 +11,24 @@
 ~A 1 "../src/bitcell_nor.sv" 14 bitcell_nor
 ~M 3 "../src/bitcell_tb.sv" 3 bitcell_tb
 ~A 1 "../src/bitcell_tb.sv" 3 bitcell_tb
+~M 1 "../src/finite_state_machine.sv" 35 d_flipflop
+~A 1 "../src/finite_state_machine.sv" 35 d_flipflop
 ~M 1 "../src/decoder.sv" 6 decoder
 ~A 1 "../src/decoder.sv" 6 decoder
 ~M 3 "../src/decoder_tb.sv" 3 decoder_tb
 ~A 1 "../src/decoder_tb.sv" 3 decoder_tb
+~M 1 "../src/finite_state_machine.sv" 8 finite_state_machine
+~A 1 "../src/finite_state_machine.sv" 8 finite_state_machine
+~M 3 "../src/finite_state_machine_tb.sv" 3 finite_state_machine_tb
+~A 1 "../src/finite_state_machine_tb.sv" 3 finite_state_machine_tb
 ~M 1 "../src/memory_unit.sv" 8 memory_unit
 ~A 1 "../src/memory_unit.sv" 8 memory_unit
 ~M 3 "../src/memory_unit_tb.sv" 3 memory_unit_tb
 ~A 1 "../src/memory_unit_tb.sv" 3 memory_unit_tb
+~M 1 "../src/or_gate_8.sv" 6 or_gate_8
+~A 1 "../src/or_gate_8.sv" 6 or_gate_8
+~M 3 "../src/or_gate_8_tb.sv" 3 or_gate_8_tb
+~A 1 "../src/or_gate_8_tb.sv" 3 or_gate_8_tb
 ~M 1 "../src/output_gate.sv" 1 output_gate
 ~A 1 "../src/output_gate.sv" 1 output_gate
 ~M 3 "../src/output_gate_tb.sv" 3 output_gate_tb

@@ -1,10 +1,12 @@
-"../src/word_tb.sv"	1
-"../src/bitcell.sv"	1
 "../src/bitcell_tb.sv"	1
+"../src/bitcell.sv"	1
 "../src/memory_unit_tb.sv"	1
-"../src/memory_unit.sv"	1
 "../src/word.sv"	1
+"../src/finite_state_machine.sv"	1
+"../src/word_tb.sv"	1
 "../src/decoder.sv"	1
 "../src/decoder_tb.sv"	1
-"../src/and_gate_8.sv"	1
-"../src/and_gate_8_tb.sv"	1
+"../src/or_gate_8.sv"	1
+"../src/memory_unit.sv"	1
+"../src/or_gate_8_tb.sv"	1
+"../src/finite_state_machine_tb.sv"	1

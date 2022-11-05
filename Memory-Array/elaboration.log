@@ -1,14 +1,21 @@
-Active-HDL 13.0.376.8320 2022-11-03 17:33:56
+Active-HDL 13.0.376.8320 2022-11-05 14:51:18
 
 Elaboration top modules:
-Verilog Module                and_gate_8_tb
+Verilog Module                finite_state_machine_tb
 
 
 ------------------------------------------------------------------------------------------------
 Verilog Module          | Library      | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------
-and_gate_8_tb           | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
-and_gate_8              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+finite_state_machine_tb | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+finite_state_machine    | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+memory_unit             | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+d_flipflop              | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+sr_latch                | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+decoder                 | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+word                    | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+or_gate_8               | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+bitcell                 | memory-array |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
 ------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
@@ -18,7 +25,7 @@ memory-array            | None
 ------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+and_gate_8_tb and_gate_8_tb
+Simulation Options: asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
 
 
 The performance of simulation is reduced. Version Student Edition
