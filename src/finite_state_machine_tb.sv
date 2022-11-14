@@ -36,12 +36,10 @@ module finite_state_machine_tb;
         end
 
         w = 0;
-        #(period*10); // Idle state
+        #(period*10);
         r = 1;
-        //#period;
 
         for (int i = 0; i < 8; i++) begin
-            #period;
             addr = i;
             #(period*0.1);
             name_out[i] = out;

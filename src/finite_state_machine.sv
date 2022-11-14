@@ -4,6 +4,7 @@
  * @param w, high when write request
  * @param clk, clock
  * @param rw, high for write, low for read
+ * @param sleep, signal for turning off power rails
  **********************************************************************/
 module finite_state_machine (
         output rw, sleep,
