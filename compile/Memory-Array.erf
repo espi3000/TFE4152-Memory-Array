@@ -1,20 +1,11 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
-UPDATEPROGRESS 2
-UPDATEPROGRESS 5
-UPDATEPROGRESS 8
-UPDATEPROGRESS 11
-UPDATEPROGRESS 14
-UPDATEPROGRESS 17
-UPDATEPROGRESS 20
-UPDATEPROGRESS 23
-UPDATEPROGRESS 26
-UPDATEPROGRESS 29
-UPDATEPROGRESS 32
 UPDATEPROGRESS 35
+MESSAGE_SP VCP2113 "Module finite_state_machine found in current working library."
+MESSAGE_SP VCP2113 "Module memory_unit found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
-UPDATEPROGRESS 40
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol sleep has not been declared in module finite_state_machine_tb." "C:/Users/espen/Repositories/TFE4152/TFE4152-Memory-Array/src/finite_state_machine_tb.sv" 14  39
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
 UPDATEPROGRESS 80
@@ -22,24 +13,17 @@ MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 UPDATEPROGRESS 81
-UPDATEPROGRESS 82
 UPDATEPROGRESS 83
-UPDATEPROGRESS 84
 UPDATEPROGRESS 85
-UPDATEPROGRESS 86
 UPDATEPROGRESS 87
-UPDATEPROGRESS 88
+UPDATEPROGRESS 89
 UPDATEPROGRESS 90
-UPDATEPROGRESS 91
 UPDATEPROGRESS 92
-UPDATEPROGRESS 93
 UPDATEPROGRESS 94
-UPDATEPROGRESS 95
 UPDATEPROGRESS 96
-UPDATEPROGRESS 97
 UPDATEPROGRESS 98
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: bitcell_tb word_tb decoder_tb memory_unit_tb or_gate_8_tb finite_state_machine_tb."
+MESSAGE "Unit top modules: finite_state_machine_tb."
 MESSAGE "$root top modules: bitcell_tb decoder_tb word_tb memory_unit_tb output_gate_tb and_gate_8_tb or_gate_8_tb finite_state_machine_tb."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."

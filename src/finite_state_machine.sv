@@ -6,21 +6,21 @@
  * @param rw, high for write, low for read
  **********************************************************************/
 module finite_state_machine (
-        output rw,
+        output rw, sleep,
         input r, w, clk
     );
     wire _r, _w;
     wire da, db;
-    wire a, _a, b, _b;
+    wire a, b, _b;
 
-    not(_a, a);
     not(_b, b);
     not(_r, r);
     not(_w, w);
 
-    and(da, _b, r, _w);
-    and(db, _a, _r, w);
-    and(rw, _a, b);
+    nor(da, b, _r, w);
+    nor(db, a, r, _w);
+    nor(rw, a, _b);
+    nor(sleep, a, b);
 
     d_flipflop ff_a(a, da, clk);
     d_flipflop ff_b(b, db, clk);

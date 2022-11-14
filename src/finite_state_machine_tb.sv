@@ -11,7 +11,7 @@ module finite_state_machine_tb;
     
     localparam period = 20;  
 
-    finite_state_machine fsm(rw, r, w, clk);
+    finite_state_machine fsm(rw, sleep, r, w, clk);
 
     memory_unit memory_unit(
         in[0], in[1], in[2], in[3], in[4], in[5], in[6], in[7], 
@@ -32,19 +32,20 @@ module finite_state_machine_tb;
             addr = i;
             #(period*0.1);
             in = name_in[i];
-            #period;
+            #(period*0.9);
         end
 
         w = 0;
         #(period*10); // Idle state
         r = 1;
-        #period;
+        //#period;
 
         for (int i = 0; i < 8; i++) begin
+            #period;
             addr = i;
             #(period*0.1);
             name_out[i] = out;
-            #period;
+            #(period*0.9);
         end
 
         $finish;

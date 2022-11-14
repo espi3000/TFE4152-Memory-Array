@@ -3,12 +3,12 @@
                  *                                           *
                  *             A I M - S p i c e             *
                  *                                           *
-                 *         Professional Version 2020.100           *
+                 *         Professional Version 2017.110           *
                  *                                           *
                  *********************************************
 
-	Date: Mon Oct 24 16:35:33 2022
-	Circuit File: C:\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\AIM-Spice\bitcell.cir
+	Date: Mon Nov 14 19:51:08 2022
+	Circuit File: \\tsclient\C\Users\espen\Repositories\TFE4152\TFE4152-Memory-Array\AIM-Spice\bitcell.cir
 	Analysis: Transient
 
 **************************  Circuit Description  **************************
@@ -60,121 +60,181 @@
     45:  *************************************
     46:  .subckt 3_in_nand y a b c vdd vss
     47:  *include param.cir
-    48:  .param ln = 0.1u
-    49:  .param lp = 0.1u
-    50:  .param wn = 0.1u
-    51:  .param wp = 0.1u
-    52:  *end of: param.cir
-    53:  xmp1 y a vdd vdd pmos1v l=lp w=wp
-    54:  xmp2 y b vdd vdd pmos1v l=lp w=wp
-    55:  xmp3 y c vdd vdd pmos1v l=lp w=wp
-    56:  xmn1 y a 1 1 nmos1v l=ln w=wn
-    57:  xmn2 1 b 2 2 nmos1v l=ln w=wn
-    58:  xmn3 2 c vss vss nmos1v l=ln w=wn
-    59:  .ends
-    60:  
-    61:  *************************************
-    62:  * 2 INPUT NAND GATE
-    63:  *************************************
-    64:  .subckt 2_in_nand y a b vdd vss
-    65:  *include param.cir
-    66:  .param ln = 0.1u
-    67:  .param lp = 0.1u
-    68:  .param wn = 0.1u
-    69:  .param wp = 0.1u
-    70:  *end of: param.cir
-    71:  xmp1 y a vdd vdd pmos1v l=lp w=wp
-    72:  xmp2 y b vdd vdd pmos1v l=lp w=wp
-    73:  xmn1 y a 1 1 nmos1v l=ln w=wn
-    74:  xmn2 1 b vss vss nmos1v l=ln w=wn
-    75:  .ends
-    76:  *end of: nand.cir
-    77:  *include and.cir
+    48:  *************************************
+    49:  * PARAMS
+    50:  *************************************
+    51:  *.param ln = 300n
+    52:  *.param lp = 300n
+    53:  *.param wn = 300n
+    54:  *.param wp = 700n
+    55:  
+    56:  *.param vh = 0.54
+    57:  
+    58:  .param ln = 150n
+    59:  .param lp = 150n
+    60:  .param wn = 150n
+    61:  .param wp = 1500n
+    62:  
+    63:  .param vh = 0.45
+    64:  *end of: param.cir
+    65:  xmp1 y a vdd vdd pmos1v l=lp w=wp
+    66:  xmp2 y b vdd vdd pmos1v l=lp w=wp
+    67:  xmp3 y c vdd vdd pmos1v l=lp w=wp
+    68:  xmn1 y a 1 1 nmos1v l=ln w=wn
+    69:  xmn2 1 b 2 2 nmos1v l=ln w=wn
+    70:  xmn3 2 c vss vss nmos1v l=ln w=wn
+    71:  .ends
+    72:  
+    73:  *************************************
+    74:  * 2 INPUT NAND GATE
+    75:  *************************************
+    76:  .subckt 2_in_nand y a b vdd vss
+    77:  *include param.cir
     78:  *************************************
-    79:  *3 INPUT AND GATE
+    79:  * PARAMS
     80:  *************************************
-    81:  .subckt 3_in_and y a b c vdd vss
-    82:  *include param.cir
-    83:  .param ln = 0.1u
-    84:  .param lp = 0.1u
-    85:  .param wn = 0.1u
-    86:  .param wp = 0.1u
-    87:  *end of: param.cir
-    88:  xmp1 noty a vdd vdd pmos1v l=lp w=wp
-    89:  xmp2 noty b vdd vdd pmos1v l=lp w=wp
-    90:  xmp3 noty c vdd vdd pmos1v l=lp w=wp
-    91:  xmn1 noty a 1 1 nmos1v l=ln w=wn
-    92:  xmn2 1 b 2 2 nmos1v l=ln w=wn
-    93:  xmn3 2 c vss vss nmos1v l=ln w=wn
-    94:  xmp4 y noty vdd vdd pmos1v l=lp w=wp 
-    95:  xmn4 y noty vss vss nmos1v l=ln w=wn 
-    96:  .ends
-    97:  
-    98:  *************************************
-    99:  *2 INPUT AND GATE
-   100:  *************************************
-   101:  .subckt 2_in_and y a b vdd vss
-   102:  *include param.cir
-   103:  .param ln = 0.1u
-   104:  .param lp = 0.1u
-   105:  .param wn = 0.1u
-   106:  .param wp = 0.1u
-   107:  *end of: param.cir
-   108:  xmp1 noty a vdd vdd pmos1v l=lp w=wp
-   109:  xmp2 noty b vdd vdd pmos1v l=lp w=wp
-   110:  xmn1 noty a 1 1 nmos1v l=ln w=wn
-   111:  xmn2 1 b vss vss nmos1v l=ln w=wn
-   112:  xmp3 y noty vdd vdd pmos1v l=lp w=wp 
-   113:  xmn3 y noty vss vss nmos1v l=ln w=wn 
-   114:  .ends
-   115:  *end of: and.cir
-   116:  *include not.cir
-   117:  *************************************
-   118:  * NOT GATE
-   119:  *************************************
-   120:  .subckt not noty y vdd vss
-   121:  *include param.cir
-   122:  .param ln = 0.1u
-   123:  .param lp = 0.1u
-   124:  .param wn = 0.1u
-   125:  .param wp = 0.1u
-   126:  *end of: param.cir
-   127:  xmp1 noty y vdd vdd pmos1v l=lp w=wp 
-   128:  xmn1 noty y vss vss nmos1v l=ln w=wn 
-   129:  .ends
-   130:  *end of: not.cir
-   131:  
-   132:  *******************************************
-   133:  * VOLTAGE SOURCE
-   134:  *******************************************
-   135:  vdd1 vdd 0 1
-   136:  vdd2 vss 0 0
-   137:  
-   138:  *******************************************
-   139:  * STIMULI
-   140:  *******************************************
-   141:  vin in vss pulse(0 1 1ns 1ns 1ns 5ms 10ms)
-   142:  vsel sel vss pulse(0 1 1ns 1ns 1ns 100ms 200ms)
-   143:  vrw rw vss pulse(0 1 1ns 1ns 1ns 50ms 100ms)
-   144:  
-   145:  *******************************************
-   146:  * SR LATCH
-   147:  *******************************************
-   148:  xnandq q s notq vdd vss 2_in_nand
-   149:  xnandnotq notq r q vdd vss 2_in_nand
-   150:  
-   151:  *******************************************
-   152:  * INPUT SELECT
-   153:  *******************************************
-   154:  xnot notrw rw vdd vss not
-   155:  xnands s in sel notrw vdd vss 3_in_nand
-   156:  xnandr r s sel notrw vdd vss 3_in_nand
-   157:  
-   158:  *******************************************
-   159:  * OUTPUT SELECT
-   160:  *******************************************
-   161:  xandout out q sel rw vdd vss 3_in_and
-   162:  .tran 0.0001 0.2
+    81:  *.param ln = 300n
+    82:  *.param lp = 300n
+    83:  *.param wn = 300n
+    84:  *.param wp = 700n
+    85:  
+    86:  *.param vh = 0.54
+    87:  
+    88:  .param ln = 150n
+    89:  .param lp = 150n
+    90:  .param wn = 150n
+    91:  .param wp = 1500n
+    92:  
+    93:  .param vh = 0.45
+    94:  *end of: param.cir
+    95:  xmp1 y a vdd vdd pmos1v l=lp w=wp
+    96:  xmp2 y b vdd vdd pmos1v l=lp w=wp
+    97:  xmn1 y a 1 1 nmos1v l=ln w=wn
+    98:  xmn2 1 b vss vss nmos1v l=ln w=wn
+    99:  .ends
+   100:  *end of: nand.cir
+   101:  *include and.cir
+   102:  *************************************
+   103:  *3 INPUT AND GATE
+   104:  *************************************
+   105:  .subckt 3_in_and y a b c vdd vss
+   106:  *include param.cir
+   107:  *************************************
+   108:  * PARAMS
+   109:  *************************************
+   110:  *.param ln = 300n
+   111:  *.param lp = 300n
+   112:  *.param wn = 300n
+   113:  *.param wp = 700n
+   114:  
+   115:  *.param vh = 0.54
+   116:  
+   117:  .param ln = 150n
+   118:  .param lp = 150n
+   119:  .param wn = 150n
+   120:  .param wp = 1500n
+   121:  
+   122:  .param vh = 0.45
+   123:  *end of: param.cir
+   124:  xmp1 noty a vdd vdd pmos1v l=lp w=wp
+   125:  xmp2 noty b vdd vdd pmos1v l=lp w=wp
+   126:  xmp3 noty c vdd vdd pmos1v l=lp w=wp
+   127:  xmn1 noty a 1 1 nmos1v l=ln w=wn
+   128:  xmn2 1 b 2 2 nmos1v l=ln w=wn
+   129:  xmn3 2 c vss vss nmos1v l=ln w=wn
+   130:  xmp4 y noty vdd vdd pmos1v l=lp w=wp 
+   131:  xmn4 y noty vss vss nmos1v l=ln w=wn 
+   132:  .ends
+   133:  
+   134:  *************************************
+   135:  *2 INPUT AND GATE
+   136:  *************************************
+   137:  .subckt 2_in_and y a b vdd vss
+   138:  *include param.cir
+   139:  *************************************
+   140:  * PARAMS
+   141:  *************************************
+   142:  *.param ln = 300n
+   143:  *.param lp = 300n
+   144:  *.param wn = 300n
+   145:  *.param wp = 700n
+   146:  
+   147:  *.param vh = 0.54
+   148:  
+   149:  .param ln = 150n
+   150:  .param lp = 150n
+   151:  .param wn = 150n
+   152:  .param wp = 1500n
+   153:  
+   154:  .param vh = 0.45
+   155:  *end of: param.cir
+   156:  xmp1 noty a vdd vdd pmos1v l=lp w=wp
+   157:  xmp2 noty b vdd vdd pmos1v l=lp w=wp
+   158:  xmn1 noty a 1 1 nmos1v l=ln w=wn
+   159:  xmn2 1 b vss vss nmos1v l=ln w=wn
+   160:  xmp3 y noty vdd vdd pmos1v l=lp w=wp 
+   161:  xmn3 y noty vss vss nmos1v l=ln w=wn 
+   162:  .ends
+   163:  *end of: and.cir
+   164:  *include not.cir
+   165:  *************************************
+   166:  * NOT GATE
+   167:  *************************************
+   168:  .subckt not noty y vdd vss
+   169:  *include param.cir
+   170:  *************************************
+   171:  * PARAMS
+   172:  *************************************
+   173:  *.param ln = 300n
+   174:  *.param lp = 300n
+   175:  *.param wn = 300n
+   176:  *.param wp = 700n
+   177:  
+   178:  *.param vh = 0.54
+   179:  
+   180:  .param ln = 150n
+   181:  .param lp = 150n
+   182:  .param wn = 150n
+   183:  .param wp = 1500n
+   184:  
+   185:  .param vh = 0.45
+   186:  *end of: param.cir
+   187:  xmp1 noty y vdd vdd pmos1v l=lp w=wp 
+   188:  xmn1 noty y vss vss nmos1v l=ln w=wn 
+   189:  .ends
+   190:  *end of: not.cir
+   191:  
+   192:  *******************************************
+   193:  * VOLTAGE SOURCE
+   194:  *******************************************
+   195:  vdd1 vdd 0 1
+   196:  vdd2 vss 0 0
+   197:  
+   198:  *******************************************
+   199:  * STIMULI
+   200:  *******************************************
+   201:  vin in vss pulse(0 1 1ns 1ns 1ns 5ms 10ms)
+   202:  vsel sel vss pulse(0 1 1ns 1ns 1ns 100ms 200ms)
+   203:  vrw rw vss pulse(0 1 1ns 1ns 1ns 50ms 100ms)
+   204:  
+   205:  *******************************************
+   206:  * SR LATCH
+   207:  *******************************************
+   208:  xnandq q s notq vdd vss 2_in_nand
+   209:  xnandnotq notq r q vdd vss 2_in_nand
+   210:  
+   211:  *******************************************
+   212:  * INPUT SELECT
+   213:  *******************************************
+   214:  xnot notrw rw vdd vss not
+   215:  xnands s in sel notrw vdd vss 3_in_nand
+   216:  xnandr r s sel notrw vdd vss 3_in_nand
+   217:  
+   218:  *******************************************
+   219:  * OUTPUT SELECT
+   220:  *******************************************
+   221:  xandout out q sel rw vdd vss 3_in_and
+   222:  .tran 0.0001 0.2
 
 ***************************  Model Parameters  ****************************
 
@@ -197,19 +257,19 @@
 
 *************************  Simulation Statistics  *************************
 
-	Total number of iterations.....................: 5101
-	Number of iterations for transient analysis....: 5078
-	Total number of timepoints.....................: 965
-	Number of timepoints accepted..................: 733
-	Number of timepoints rejected..................: 232
-	Total analysis time (sec)......................: 0.497
-	Transient analysis time (sec)..................: 0.491
-	Time spent in device loading (sec).............: 0.165
-	Time spent in L-U decomposition (sec)..........: 0.018
-	Time spent in matrix reordering (sec)..........: 0
-	Time spent in matrix solving (sec).............: 0.009
-	Time spent in transient L-U decomposition (sec): 0.018
-	Time spent in transient matrix solving (sec)...: 0.009
+	Total number of iterations.....................: 4794
+	Number of iterations for transient analysis....: 4772
+	Total number of timepoints.....................: 931
+	Number of timepoints accepted..................: 703
+	Number of timepoints rejected..................: 228
+	Total analysis time (sec)......................: 0.177
+	Transient analysis time (sec)..................: 0.176
+	Time spent in device loading (sec).............: 0.098
+	Time spent in L-U decomposition (sec)..........: 0.008
+	Time spent in matrix reordering (sec)..........: 0.001
+	Time spent in matrix solving (sec).............: 0.007
+	Time spent in transient L-U decomposition (sec): 0.008
+	Time spent in transient matrix solving (sec)...: 0.007
 
 ***************************  Kernel Messages  *****************************
 
@@ -222,6 +282,8 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn4:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp4:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -230,10 +292,16 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -242,10 +310,16 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -254,30 +328,46 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = not:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = not:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 Warning: vrw: no DC value, transient time 0 value used
 Warning: vsel: no DC value, transient time 0 value used
 Warning: vin: no DC value, transient time 0 value used
@@ -289,6 +379,8 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn4:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp4:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -297,10 +389,16 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = andout:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -309,10 +407,16 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandr:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mn3:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
@@ -321,30 +425,46 @@ BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp3:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nands:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = not:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = not:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandnotq:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mn2:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mn1:gpdk090_nmos1v_x
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mp2:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 BSIM3 v3.3.0 Parameter Checking.
 Model = nandq:mp1:gpdk090_pmos1v_x
+Warning: Pd = 1e-06 is less than W.
+Warning: Ps = 1e-06 is less than W.
 Warning: vrw: no DC value, transient time 0 value used
 Warning: vsel: no DC value, transient time 0 value used
 Warning: vin: no DC value, transient time 0 value used

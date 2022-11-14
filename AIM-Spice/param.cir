@@ -1,7 +1,16 @@
 *************************************
 * PARAMS
 *************************************
-.param ln = 90n
-.param lp = 90n
-.param wn = 90n
-.param wp = 300n
+*.param ln = 300n
+*.param lp = 300n
+*.param wn = 300n
+*.param wp = 700n
+
+*.param vh = 0.54
+
+.param ln = 150n
+.param lp = 150n
+.param wn = 150n
+.param wp = 1500n
+
+.param vh = 0.45
