@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2022-11-10 17:48:54
+Active-HDL 13.0.376.8320 2022-11-17 08:43:45
 
 Elaboration top modules:
 Verilog Module                finite_state_machine_tb
@@ -23,3 +23,9 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------
 memory-array            | None
 ------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+finite_state_machine_tb finite_state_machine_tb
+
+
+The performance of simulation is reduced. Version Student Edition

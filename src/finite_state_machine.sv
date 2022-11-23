@@ -31,15 +31,15 @@ endmodule
  * @brief Structure of NAND D flip flop
  * @param q, output bit to read
  * @param d, input bit to write
- * @param clk, clock activation on negative edge
+ * @param clk, clock activation on positive edge
  **********************************************************************/
 module d_flipflop (
         output q, 
         input d, clk
     );
     wire _q, s, r;
-    //not(_clk, clk);
-	nand(s, d, clk);
-    nand(r, s, clk);
+    not(_clk, clk);
+	nand(s, d, _clk);
+    nand(r, s, _clk);
     sr_latch latch(q, _q, s, r);
 endmodule
